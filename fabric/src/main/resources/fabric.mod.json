@@ -19,6 +19,9 @@
     ],
     "client": [
       "com.github.yajatkaul.mega_showdown.fabric.MegaShowdownFabricClient"
+    ],
+    "jade": [
+      "com.github.yajatkaul.mega_showdown.plugin.JadePlugin"
     ]
   },
   "mixins": [

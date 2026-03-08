@@ -132,4 +132,12 @@ public class ReassemblyUnitBlockEntity extends BlockEntity {
             return name().toLowerCase(Locale.ROOT);
         }
     }
+
+    public int getCookTime() {
+        return cookTime;
+    }
+
+    public int getMaxCookTime() {
+        return maxCookTime;
+    }
 }

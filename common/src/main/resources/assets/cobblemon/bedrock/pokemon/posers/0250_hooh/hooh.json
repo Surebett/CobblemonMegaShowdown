@@ -3,7 +3,7 @@
   "portraitTranslation": [-1.81, 3.42, 0],
   "profileScale": 0.42,
   "profileTranslation": [-0.04, 1.11, 0],
-  "rootBone": "ho_oh",
+  "rootBone": "hooh",
   "firstPersonCameraOffset": {
     "seat_1": [0, 0.45, 0],
     "seat_2": [0, 0.45, 0]
@@ -22,7 +22,7 @@
       "animations": [
         "q.look('neck', 1, 1, 70, -10, 20, -20)",
         "q.look('head', 1, 1, 20, -90, 60, -37)",
-        "q.bedrock('ho_oh', 'ground_idle')"
+        "q.bedrock('hooh', 'ground_idle')"
       ],
       "transformedParts": [
         {
@@ -42,7 +42,7 @@
           "isVisible": true
         }
       ],
-      "quirks": ["q.bedrock_quirk('ho_oh', 'blink')"]
+      "quirks": ["q.bedrock_quirk('hooh', 'blink')"]
     },
     "walk": {
       "poseName": "walk",
@@ -50,7 +50,7 @@
       "animations": [
         "q.look('neck', 1, 1, 70, -10, 20, -20)",
         "q.look('head', 1, 1, 20, -90, 60, -37)",
-        "q.bedrock('ho_oh', 'ground_walk')"
+        "q.bedrock('hooh', 'ground_walk')"
       ],
       "transformedParts": [
         {
@@ -78,7 +78,7 @@
       "animations": [
         "q.look('neck', 1, 1, 70, -10, 20, -20)",
         "q.look('head', 1, 1, 20, -90, 60, -37)",
-        "q.bedrock('ho_oh', 'air_idle')"
+        "q.bedrock('hooh', 'air_idle')"
       ],
       "transformedParts": [
         {
@@ -106,7 +106,7 @@
       "animations": [
         "q.look('neck', 1, 1, 70, -10, 20, -20)",
         "q.look('head', 1, 1, 20, -90, 60, -37)",
-        "q.bedrock('ho_oh', 'air_fly')"
+        "q.bedrock('hooh', 'air_fly')"
       ],
       "transformedParts": [
         {
@@ -131,7 +131,7 @@
     "sleep": {
       "poseName": "sleep",
       "poseTypes": ["SLEEP"],
-      "animations": ["q.bedrock('ho_oh', 'sleep')"],
+      "animations": ["q.bedrock('hooh', 'sleep')"],
       "transformedParts": [
         {
           "part": "wing_open_left",

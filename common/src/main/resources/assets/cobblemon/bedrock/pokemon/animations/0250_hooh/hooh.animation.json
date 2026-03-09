@@ -1,7 +1,7 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
-		"animation.ho_oh.ground_idle": {
+		"animation.hooh.ground_idle": {
 			"loop": true,
 			"bones": {
 				"thigh_left": {
@@ -179,7 +179,7 @@
 				}
 			}
 		},
-		"animation.ho_oh.ground_walk": {
+		"animation.hooh.ground_walk": {
 			"loop": true,
 			"animation_length": 2,
 			"bones": {
@@ -789,7 +789,7 @@
 				}
 			}
 		},
-		"animation.ho_oh.air_idle": {
+		"animation.hooh.air_idle": {
 			"loop": true,
 			"bones": {
 				"crest_middle_front": {
@@ -1374,7 +1374,7 @@
 				}
 			}
 		},
-		"animation.ho_oh.air_fly": {
+		"animation.hooh.air_fly": {
 			"loop": true,
 			"bones": {
 				"crest_middle_front": {
@@ -1959,7 +1959,7 @@
 				}
 			}
 		},
-		"animation.ho_oh.battle_idle": {
+		"animation.hooh.battle_idle": {
 			"loop": true,
 			"bones": {
 				"crest_middle_front": {
@@ -2550,7 +2550,7 @@
 				}
 			}
 		},
-		"animation.ho_oh.faint": {
+		"animation.hooh.faint": {
 			"loop": true,
 			"animation_length": 3,
 			"bones": {
@@ -3463,7 +3463,7 @@
 				}
 			}
 		},
-		"animation.ho_oh.cry": {
+		"animation.hooh.cry": {
 			"animation_length": 1.2917,
 			"bones": {
 				"head": {
@@ -3521,7 +3521,7 @@
 				}
 			}
 		},
-		"animation.ho_oh.recoil": {
+		"animation.hooh.recoil": {
 			"animation_length": 1,
 			"bones": {
 				"body": {
@@ -3678,7 +3678,7 @@
 				}
 			}
 		},
-		"animation.ho_oh.attack": {
+		"animation.hooh.attack": {
 			"loop": true,
 			"animation_length": 2,
 			"bones": {
@@ -4378,7 +4378,7 @@
 				}
 			}
 		},
-		"animation.ho_oh.sleep": {
+		"animation.hooh.sleep": {
 			"loop": true,
 			"bones": {
 				"thigh_left": {
@@ -4539,7 +4539,7 @@
 				}
 			}
 		},
-		"animation.ho_oh.battle_sleep": {
+		"animation.hooh.battle_sleep": {
 			"loop": true,
 			"bones": {
 				"crest_middle_front": {
@@ -5147,7 +5147,7 @@
 				}
 			}
 		},
-		"animation.ho_oh.blink": {
+		"animation.hooh.blink": {
 			"animation_length": 0.1667,
 			"bones": {
 				"eyelid_right": {
@@ -5176,7 +5176,7 @@
 				}
 			}
 		},
-		"animation.ho_oh.hold_item": {
+		"animation.hooh.hold_item": {
 			"loop": true,
 			"bones": {
 				"jaw": {
@@ -5190,7 +5190,7 @@
 				}
 			}
 		},
-		"animation.ho_oh.pose": {
+		"animation.hooh.pose": {
 			"loop": true,
 			"bones": {
 				"thigh_left": {
@@ -5367,7 +5367,7 @@
 				}
 			}
 		},
-		"animation.ho_oh.pose2": {
+		"animation.hooh.pose2": {
 			"loop": true,
 			"bones": {
 				"thigh_left": {
@@ -5544,7 +5544,7 @@
 				}
 			}
 		},
-		"animation.ho_oh.pose3": {
+		"animation.hooh.pose3": {
 			"loop": true,
 			"bones": {
 				"thigh_left": {
@@ -5690,7 +5690,7 @@
 				}
 			}
 		},
-		"animation.ho_oh.happy": {
+		"animation.hooh.happy": {
 			"loop": true,
 			"bones": {
 				"eye_right": {
@@ -5716,7 +5716,7 @@
 				}
 			}
 		},
-		"animation.ho_oh.sad": {
+		"animation.hooh.sad": {
 			"loop": true,
 			"bones": {
 				"pupil_right": {
@@ -5741,7 +5741,7 @@
 				}
 			}
 		},
-		"animation.ho_oh.surprised": {
+		"animation.hooh.surprised": {
 			"loop": true,
 			"bones": {
 				"pupil_right": {
@@ -5764,7 +5764,7 @@
 				}
 			}
 		},
-		"animation.ho_oh.disinterested": {
+		"animation.hooh.disinterested": {
 			"loop": true,
 			"bones": {
 				"pupil_right": {
@@ -5787,7 +5787,7 @@
 				}
 			}
 		},
-		"animation.ho_oh.hurt": {
+		"animation.hooh.hurt": {
 			"loop": true,
 			"bones": {
 				"eye_right": {

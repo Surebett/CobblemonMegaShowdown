@@ -5,6 +5,7 @@ import com.cobblemon.mod.common.api.types.ElementalType;
 import com.cobblemon.mod.common.client.gui.battle.subscreen.BattleMoveSelection;
 import com.cobblemon.mod.common.pokemon.Pokemon;
 import com.github.yajatkaul.mega_showdown.client.battle.hud.MovePreviewWidget;
+import com.github.yajatkaul.mega_showdown.config.MegaShowdownConfig;
 import net.minecraft.client.gui.GuiGraphics;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -27,7 +28,7 @@ public abstract class MoveTileMixin {
 
     @Inject(method = "render", at = @At("TAIL"))
     private void addPreview (GuiGraphics context, int mouseX, int mouseY, float delta, CallbackInfo info) {
-        if (this.isHovered(mouseX, mouseY)) {
+        if (this.isHovered(mouseX, mouseY) && MegaShowdownConfig.showMoveInspector) {
             if (this.mega_showdown$previewWidget == null) this.mega_showdown$previewWidget = new MovePreviewWidget(this.moveTemplate);
             this.mega_showdown$previewWidget.setSTAB(this.pokemon, this.elementalType);
             this.mega_showdown$previewWidget.render(context, mouseX, mouseY, delta);

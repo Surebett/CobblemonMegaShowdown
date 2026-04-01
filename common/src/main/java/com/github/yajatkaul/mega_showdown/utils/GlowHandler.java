@@ -40,14 +40,6 @@ public class GlowHandler {
             }
 
             scoreboard.addPlayerToTeam(pokemonEntity.getScoreboardName(), team);
-
-            ServerPlayer owner = serverLevel.getServer()
-                    .getPlayerList()
-                    .getPlayer(pokemonEntity.getPokemon().getOwnerUUID());
-
-            if (owner != null) {
-                scoreboard.addPlayerToTeam(owner.getScoreboardName(), team);
-            }
         }
     }
 

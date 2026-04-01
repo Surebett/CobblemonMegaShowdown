@@ -13,13 +13,13 @@
     "client.LivingEntityRendererMixin",
     "client.ModeBakeryMixin",
     "client.PokemonRendererMixin",
+    "client.battle.BattleMessagePacketHandlerMixin",
     "client.ui.MoveTileMixin",
     "client.ui.PCGUIMixin",
     "client.ui.SummaryCompanionMixin",
     "client.ui.SummaryMixin",
-    "client.ui.TypeWidgetMixin",
     "client.ui.TypeIconMixin",
-    "client.battle.BattleMessagePacketHandlerMixin",
+    "client.ui.TypeWidgetMixin",
     "minecraft.ItemInHandRendererMixin"
   ],
   "mixins": [
@@ -29,6 +29,7 @@
     "PlayerPartyStoreMixin",
     "PokemonEntityMixin",
     "PokemonSpeciesMixin",
+    "TamableAnimalMixin",
     "TeraTypesAccessor",
     "battle.BattleGimmickButtonCompanionMixin",
     "battle.BattleRegistryMixin",

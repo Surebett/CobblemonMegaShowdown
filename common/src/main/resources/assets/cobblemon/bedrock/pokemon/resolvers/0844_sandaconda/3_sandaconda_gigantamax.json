@@ -6,27 +6,13 @@
       "aspects": ["gmax"],
       "poser": "cobblemon:sandacondagmax",
       "model": "cobblemon:sandaconda_gigantamax.geo",
-      "texture": "cobblemon:textures/pokemon/0844_sandaconda/sandaconda_gigantamax.png",
-      "layers": [
-        {
-          "name": "emissive",
-          "texture": "cobblemon:textures/pokemon/0844_sandaconda/sandaconda_gigantamax_emissive.png",
-          "emissive": true
-        }
-      ]
+      "texture": "cobblemon:textures/pokemon/0844_sandaconda/sandaconda_gigantamax.png"
     },
     {
       "aspects": ["gmax", "shiny"],
       "poser": "cobblemon:sandacondagmax",
       "model": "cobblemon:sandaconda_gigantamax.geo",
-      "texture": "cobblemon:textures/pokemon/0844_sandaconda/sandaconda_gigantamax_shiny.png",
-      "layers": [
-        {
-          "name": "emissive",
-          "texture": "cobblemon:textures/pokemon/0844_sandaconda/sandaconda_gigantamax_emissive.png",
-          "emissive": true
-        }
-      ]
+      "texture": "cobblemon:textures/pokemon/0844_sandaconda/sandaconda_gigantamax_shiny.png"
     }
   ]
 }

@@ -1,12 +1,5 @@
-# 1.9.4+1.7.3-release
-- Added diantha_mega_charm, zinnia_mega_anklet
-- Added all gmaxes
-- Fixed posers
-- Fixed bonded for life advancements
-- New Mega Raichu Models and Mega raichu X particles (From: <@1531949912026251304>)
-- New Yveltal model (From: <@333666691290628096>)
-- Species files for Mega Slowbro and Yveltal Hitboxes
-- Mega Raichu X can fly now
-- Rideable yveltal
-- Fixed all gmax species/sizing and hitboxes
-- Added aplin line from missingmons
+# 1.9.5+1.7.3-release
+- New Mega Blastoise Model
+- Barbaracite fix (srry for the 2 barbaracle fans)
+- Mega feraligatr shiny texture fix
+- Fixed gmax garbodor textures

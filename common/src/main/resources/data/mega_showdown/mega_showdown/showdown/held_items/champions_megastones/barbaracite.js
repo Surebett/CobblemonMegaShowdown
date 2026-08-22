@@ -1,8 +1,8 @@
 ({
   name: "Barbaracite",
 	spritenum: 564,
-  megaStone: { "Malamar": "Malamar-Mega" },
-  itemUser: ["Malamar"],
+  megaStone: { "Barbaracle": "Barbaracle-Mega" },
+  itemUser: ["Barbaracle"],
   onTakeItem(item, source) {
     return !item.megaStone?.[source.baseSpecies.baseSpecies];
   },

@@ -483,6 +483,9 @@
     ]
   },
   "pokemon.sceptile_mega.cry": {
-    "sounds": ["cobblemon:pokemon/0254_sceptile/sceptile_mega_cry"]
+    "sounds": ["cobblemon:pokemon/sceptile/sceptile_mega_cry"]
+  },
+  "pokemon.virizion.cry": {
+    "sounds": ["cobblemon:pokemon/virizion/virizion_cry"]
   }
 }

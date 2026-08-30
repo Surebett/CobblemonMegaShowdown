@@ -7,6 +7,7 @@ import com.cobblemon.mod.common.api.reactive.SimpleObservable;
 import com.cobblemon.mod.common.battles.runner.graal.GraalShowdownService;
 import com.cobblemon.mod.relocations.graalvm.polyglot.Value;
 import com.github.yajatkaul.mega_showdown.MegaShowdown;
+import com.github.yajatkaul.mega_showdown.utils.TypeEffectivenessUtils;
 import kotlin.Unit;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
@@ -42,6 +43,33 @@ public class TypeCharts implements DataRegistry {
                     String js = entry.getValue().replace("\n", " ");
                     receiveTypeChartDataFn.execute(typeChartId, js);
                 }
+
+                Value getTypeChartDataFn = service.context.getBindings("js").getMember("getTypeChart");
+                Value result = getTypeChartDataFn.execute();
+
+                // Typechart data
+                for (String defendingType : result.getMemberKeys()) {
+                    Value typeData = result.getMember(defendingType);
+                    Value damageTaken = typeData.getMember("damageTaken");
+
+                    Map<String, Double> matchups = new HashMap<>();
+
+                    for (String attackingType : damageTaken.getMemberKeys()) {
+
+                        int value = damageTaken.getMember(attackingType).asInt();
+
+                        double multiplier = switch (value) {
+                            case 1 -> 2.0;
+                            case 2 -> 0.5;
+                            case 3 -> 0.0;
+                            default -> 1.0;
+                        };
+
+                        matchups.put(attackingType.toLowerCase(), multiplier);
+                    }
+
+                    TypeEffectivenessUtils.typeChartMap.put(defendingType.toLowerCase(), matchups);
+                }
             }
             return Unit.INSTANCE;
         });
@@ -72,6 +100,8 @@ public class TypeCharts implements DataRegistry {
     @Override
     public void reload(@NotNull ResourceManager resourceManager) {
         typeChartScripts.clear();
+        TypeEffectivenessUtils.typeChartMap.clear();
+
         resourceManager.listResources("mega_showdown/showdown/typecharts", path -> path.getPath().endsWith(".js")).forEach((id, resource) -> {
             try (BufferedReader reader = new BufferedReader(new InputStreamReader(resource.open(), StandardCharsets.UTF_8))) {
                 String js = reader.lines().collect(Collectors.joining("\n"));

@@ -69,6 +69,10 @@ function getTypeChart() {
   return JSON.stringify(Dex.data.TypeChart);
 }
 
+function getTypeChartData() {
+  return Dex.data.TypeChart;
+}
+
 function resetData(type) {
   const registry = Cobblemon.getRegistry(type);
   registry.reset();

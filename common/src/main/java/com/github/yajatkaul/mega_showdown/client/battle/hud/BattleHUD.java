@@ -33,6 +33,14 @@ public class BattleHUD {
     private static final List<UUID> pokemonAtTurnStart = new ArrayList<>();
     private static final List<Component> messagesThisTurn = new ArrayList<>();
 
+    public static List<BattlePokemonMemory> getActiveOpponents() {
+        ClientBattle battle = CobblemonClient.INSTANCE.getBattle();
+        if (battle == null || battle.getSpectating()) {
+            return List.of();
+        }
+        return teamPreviews.getLast().getMemories().stream().filter(BattlePokemonMemory::isActive).toList();
+    }
+
     // Item Translation Key Handling
 
     /**

@@ -8,6 +8,7 @@ import com.cobblemon.mod.common.api.storage.pc.PCStore;
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
 import com.cobblemon.mod.common.pokemon.Pokemon;
 import com.cobblemon.mod.common.pokemon.properties.UnaspectPropertyType;
+import com.github.yajatkaul.mega_showdown.MegaShowdown;
 import com.github.yajatkaul.mega_showdown.api.codec.Effect;
 import com.github.yajatkaul.mega_showdown.components.MegaShowdownDataComponents;
 import com.github.yajatkaul.mega_showdown.config.MegaShowdownConfig;
@@ -15,6 +16,7 @@ import com.github.yajatkaul.mega_showdown.datapack.MegaShowdownDatapackRegister;
 import com.github.yajatkaul.mega_showdown.gimmick.MaxGimmick;
 import com.github.yajatkaul.mega_showdown.gimmick.MegaGimmick;
 import com.github.yajatkaul.mega_showdown.utils.RegistryLocator;
+import com.github.yajatkaul.mega_showdown.utils.TypeEffectivenessUtils;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.context.CommandContext;
@@ -116,6 +118,14 @@ public class MegaShowdownCommands {
         if (player == null) {
             return 0;
         }
+
+        TypeEffectivenessUtils.typeChartMap.forEach((key, val) -> {
+            MegaShowdown.LOGGER.info("Type: {}", key);
+
+            val.forEach((key2, val2) -> {
+                MegaShowdown.LOGGER.info("{} -> {}", key2, val2);
+            });
+        });
 
         PlayerPartyStore playerPartyStore = Cobblemon.INSTANCE.getStorage().getParty(player);
         reset(playerPartyStore);

@@ -3,6 +3,7 @@ package com.github.yajatkaul.mega_showdown.event;
 import com.cobblemon.mod.common.Cobblemon;
 import com.cobblemon.mod.common.api.Priority;
 import com.cobblemon.mod.common.api.battles.model.PokemonBattle;
+import com.cobblemon.mod.common.api.battles.model.actor.BattleActor;
 import com.cobblemon.mod.common.api.drop.ItemDropEntry;
 import com.cobblemon.mod.common.api.events.CobblemonEvents;
 import com.cobblemon.mod.common.api.events.battles.BattleFaintedEvent;
@@ -21,6 +22,7 @@ import com.cobblemon.mod.common.api.events.pokemon.healing.PokemonHealedEvent;
 import com.cobblemon.mod.common.api.item.HealingSource;
 import com.cobblemon.mod.common.api.storage.party.PlayerPartyStore;
 import com.cobblemon.mod.common.api.types.tera.TeraTypes;
+import com.cobblemon.mod.common.battles.ActiveBattlePokemon;
 import com.cobblemon.mod.common.battles.dispatch.UntilDispatch;
 import com.cobblemon.mod.common.battles.pokemon.BattlePokemon;
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
@@ -347,19 +349,21 @@ public class CobbleEvents {
     }
 
     private static void hookBattlePre(BattleStartedEvent.Pre event) {
-        AtomicBoolean cancelled = new AtomicBoolean(false);
-        event.getBattle().getActivePokemon().forEach(pkmn -> {
-            if (pkmn.getBattlePokemon().getEffectedPokemon().getAspects().contains("core-percent")) {
-                event.cancel();
-                cancelled.set(true);
+        for (BattleActor actor : event.getBattle().getActors()) {
+            for (BattlePokemon battlePokemon : actor.getPokemonList()) {
+                Pokemon pokemon = battlePokemon.getEffectedPokemon();
+
+                if (pokemon.getAspects().contains("core-percent")) {
+                    event.cancel();
+                    return;
+                }
             }
-        });
-        if (cancelled.get()) {
-            return;
         }
 
         event.getBattle().getPlayers().forEach(serverPlayer -> {
-            PlayerPartyStore playerPartyStore = Cobblemon.INSTANCE.getStorage().getParty(serverPlayer);
+            PlayerPartyStore playerPartyStore =
+                    Cobblemon.INSTANCE.getStorage().getParty(serverPlayer);
+
             AspectUtils.revertPokemonsIfRequiredBattleStart(playerPartyStore);
         });
     }

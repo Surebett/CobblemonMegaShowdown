@@ -3,3 +3,5 @@
 - Added Cobalion, Terrakion from missingmons
 - Added Wochien, Virizion from atm x msd
 - Added Okidogi, Munkidori, and Fezandipiti from Pokemans
+- Type effectiveness on GUI
+- Fixed bug where you could battle zygarde core form

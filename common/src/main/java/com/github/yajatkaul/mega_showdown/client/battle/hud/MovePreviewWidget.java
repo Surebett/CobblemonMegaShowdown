@@ -4,6 +4,9 @@ import com.cobblemon.mod.common.api.moves.MoveTemplate;
 import com.cobblemon.mod.common.api.types.ElementalType;
 import com.cobblemon.mod.common.pokemon.Pokemon;
 import com.github.yajatkaul.mega_showdown.MegaShowdown;
+import com.github.yajatkaul.mega_showdown.client.battle.storage.BattlePokemonMemory;
+import com.github.yajatkaul.mega_showdown.utils.TypeEffectivenessUtils;
+import com.google.common.collect.Iterables;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
@@ -14,6 +17,9 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.CommonColors;
+
+import java.util.List;
+import java.util.stream.StreamSupport;
 
 public class MovePreviewWidget extends AbstractWidget {
     public static final int WIDTH = 193;
@@ -38,7 +44,39 @@ public class MovePreviewWidget extends AbstractWidget {
 
         Component none = Component.literal("-");
         Component power = this.move.getPower() > 0 ? this.stabPower() : none;
-        Component effectiveness = Component.empty(); // TODO
+
+        MutableComponent effectiveness = Component.empty();
+
+        List<BattlePokemonMemory> opponents = BattleHUD.getActiveOpponents();
+        for (int idx = 0; idx < opponents.size(); idx++) {
+            BattlePokemonMemory opp = opponents.get(idx);
+
+            List<ElementalType> types = StreamSupport
+                    .stream(opp.getRenderablePokemon().getForm().getTypes().spliterator(), false)
+                    .toList();
+
+            double eff;
+
+            if (types.size() > 1) {
+                eff = TypeEffectivenessUtils.getEffectiveness(
+                        this.move.getElementalType().getShowdownId(),
+                        types.getFirst().getShowdownId(),
+                        types.getLast().getShowdownId()
+                );
+            } else {
+                eff = TypeEffectivenessUtils.getEffectiveness(
+                        this.move.getElementalType().getShowdownId(),
+                        types.getFirst().getShowdownId()
+                );
+            }
+
+            effectiveness.append("x").append(String.valueOf(eff));
+
+            if (idx < opponents.size() - 1) {
+                effectiveness.append(", ");
+            }
+        }
+
         Component effectChance = this.move.getEffectChances().length == 0 ? Component.literal("-") : Component.literal(String.valueOf(this.move.getEffectChances()[0].intValue())).append("%");
         Component accuracy = this.move.getAccuracy() > 0 ? Component.literal(String.valueOf((int) this.move.getAccuracy())).append("%") : none;
 
@@ -62,8 +100,8 @@ public class MovePreviewWidget extends AbstractWidget {
         context.drawString(TEXT_RENDERER, Component.translatable("cobblemon.ui.power"), leftTextStart, row1Y, CommonColors.WHITE, false);
         context.drawString(TEXT_RENDERER, power, leftNumberStart - powerWidth, row1Y, CommonColors.WHITE, false);
 
-        context.drawString(TEXT_RENDERER, Component.translatable("TODO"), rightTextStart, row1Y, CommonColors.WHITE, false);
-        context.drawString(TEXT_RENDERER, power, rightNumberStart - effectivenessWidth, row1Y, CommonColors.WHITE, false);
+        context.drawString(TEXT_RENDERER, Component.translatable("cobblemon.ui.effectiveness"), rightTextStart, row1Y, CommonColors.WHITE, false);
+        context.drawString(TEXT_RENDERER, effectiveness, rightNumberStart - effectivenessWidth, row1Y, CommonColors.WHITE, false);
 
         context.drawString(TEXT_RENDERER, Component.translatable("cobblemon.ui.effect"), leftTextStart, row2Y, CommonColors.WHITE, false);
         context.drawString(TEXT_RENDERER, effectChance, leftNumberStart - effectWidth, row2Y, CommonColors.WHITE, false);

@@ -44,7 +44,7 @@ public class TypeCharts implements DataRegistry {
                     receiveTypeChartDataFn.execute(typeChartId, js);
                 }
 
-                Value getTypeChartDataFn = service.context.getBindings("js").getMember("getTypeChart");
+                Value getTypeChartDataFn = service.context.getBindings("js").getMember("getTypeChartData");
                 Value result = getTypeChartDataFn.execute();
 
                 // Typechart data
@@ -66,10 +66,6 @@ public class TypeCharts implements DataRegistry {
 
                         matchups.put(attackingType.toLowerCase(), multiplier);
                     }
-
-                    System.out.println("result: " + result);
-                    System.out.println("isString: " + result.isString());
-                    System.out.println("keys: " + result.getMemberKeys());
 
                     TypeEffectivenessUtils.typeChartMap.put(defendingType.toLowerCase(), matchups);
                 }

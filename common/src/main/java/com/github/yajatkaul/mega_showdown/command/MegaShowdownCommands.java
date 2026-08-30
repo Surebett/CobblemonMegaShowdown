@@ -119,11 +119,11 @@ public class MegaShowdownCommands {
             return 0;
         }
 
-        TypeEffectivenessUtils.typeChartMap.forEach((key, value) -> {
-            MegaShowdown.LOGGER.info(key);
+        TypeEffectivenessUtils.typeChartMap.forEach((key, val) -> {
+            MegaShowdown.LOGGER.info("Type: {}", key);
 
-            value.forEach((key2, value2) -> {
-                MegaShowdown.LOGGER.info("{} - {}", key2, value2);
+            val.forEach((key2, val2) -> {
+                MegaShowdown.LOGGER.info("{} -> {}", key2, val2);
             });
         });
 

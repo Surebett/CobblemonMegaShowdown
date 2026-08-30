@@ -64,6 +64,10 @@ public class BattlePokemonMemory {
         return this.uuid;
     }
 
+    public RenderablePokemon getRenderablePokemon() {
+        return this.renderablePokemon;
+    }
+
     public void setState(BattlePokemonState state) {
         if (state.moves().isPresent()) {
             state.moves().get()

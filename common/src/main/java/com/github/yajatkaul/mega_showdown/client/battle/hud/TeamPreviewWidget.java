@@ -1,6 +1,7 @@
 package com.github.yajatkaul.mega_showdown.client.battle.hud;
 
 import com.github.yajatkaul.mega_showdown.MegaShowdown;
+import com.github.yajatkaul.mega_showdown.client.battle.storage.BattlePokemonMemory;
 import com.github.yajatkaul.mega_showdown.config.MegaShowdownConfig;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
@@ -23,6 +24,10 @@ public class TeamPreviewWidget extends AbstractWidget {
 
     private final List<PokeballPreviewWidget> party = new ArrayList<>();
     private final boolean isLeft;
+
+    public List<BattlePokemonMemory> getMemories() {
+        return party.stream().map(PokeballPreviewWidget::getBattleMemory).toList();
+    }
 
     public TeamPreviewWidget(int x, int y, boolean isLeft) {
         super(x, y, WIDTH, BORDER_HEIGHT * 2, Component.literal(""));

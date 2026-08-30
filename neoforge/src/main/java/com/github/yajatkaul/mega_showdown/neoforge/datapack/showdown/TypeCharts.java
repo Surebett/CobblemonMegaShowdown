@@ -44,7 +44,7 @@ public class TypeCharts implements DataRegistry {
                     receiveTypeChartDataFn.execute(typeChartId, js);
                 }
 
-                Value getTypeChartDataFn = service.context.getBindings("js").getMember("getTypeChart");
+                Value getTypeChartDataFn = service.context.getBindings("js").getMember("getTypeChartData");
                 Value result = getTypeChartDataFn.execute();
 
                 // Typechart data

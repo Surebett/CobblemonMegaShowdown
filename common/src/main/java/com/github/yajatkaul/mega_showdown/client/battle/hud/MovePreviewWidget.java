@@ -38,10 +38,12 @@ public class MovePreviewWidget extends AbstractWidget {
 
         Component none = Component.literal("-");
         Component power = this.move.getPower() > 0 ? this.stabPower() : none;
+        Component effectiveness = Component.empty(); // TODO
         Component effectChance = this.move.getEffectChances().length == 0 ? Component.literal("-") : Component.literal(String.valueOf(this.move.getEffectChances()[0].intValue())).append("%");
         Component accuracy = this.move.getAccuracy() > 0 ? Component.literal(String.valueOf((int) this.move.getAccuracy())).append("%") : none;
 
         int powerWidth = TEXT_RENDERER.width(power);
+        int effectivenessWidth = TEXT_RENDERER.width(effectiveness);
         int effectWidth = TEXT_RENDERER.width(effectChance);
         int accuracyWidth = TEXT_RENDERER.width(accuracy);
 
@@ -58,7 +60,10 @@ public class MovePreviewWidget extends AbstractWidget {
         int row2Y = (int) ((this.getY() + 18.5) / scale);
 
         context.drawString(TEXT_RENDERER, Component.translatable("cobblemon.ui.power"), leftTextStart, row1Y, CommonColors.WHITE, false);
-        context.drawString(TEXT_RENDERER, power, rightNumberStart - powerWidth, row1Y, CommonColors.WHITE, false);
+        context.drawString(TEXT_RENDERER, power, leftNumberStart - powerWidth, row1Y, CommonColors.WHITE, false);
+
+        context.drawString(TEXT_RENDERER, Component.translatable("TODO"), rightTextStart, row1Y, CommonColors.WHITE, false);
+        context.drawString(TEXT_RENDERER, power, rightNumberStart - effectivenessWidth, row1Y, CommonColors.WHITE, false);
 
         context.drawString(TEXT_RENDERER, Component.translatable("cobblemon.ui.effect"), leftTextStart, row2Y, CommonColors.WHITE, false);
         context.drawString(TEXT_RENDERER, effectChance, leftNumberStart - effectWidth, row2Y, CommonColors.WHITE, false);

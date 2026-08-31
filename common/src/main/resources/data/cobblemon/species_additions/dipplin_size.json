@@ -1,9 +1,10 @@
 {
-    "target": "cobblemon:dipplin",
-    "baseScale": 0.5,
-    "hitbox": {
-        "width": 0.5,
-        "height": 0.5,
-        "fixed": false
-    }
+  "implemented": true,
+  "target": "cobblemon:dipplin",
+  "baseScale": 0.5,
+  "hitbox": {
+    "width": 0.5,
+    "height": 0.5,
+    "fixed": false
+  }
 }

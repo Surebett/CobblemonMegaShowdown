@@ -1,4 +1,5 @@
 {
+  "implemented": true,
   "target": "cobblemon:chandelure",
   "features": ["mega_evolution"],
   "forms": [

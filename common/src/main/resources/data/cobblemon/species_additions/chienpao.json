@@ -1,11 +1,11 @@
 {
   "implemented": true,
-  "target": "cobblemon:applin",
+  "target": "cobblemon:chienpao",
   "shoulderMountable": true,
-  "baseScale": 0.4,
+  "baseScale": 1.3,
   "hitbox": {
-    "width": 0.3,
-    "height": 0.4,
+    "width": 0.8,
+    "height": 1,
     "fixed": false
   }
 }

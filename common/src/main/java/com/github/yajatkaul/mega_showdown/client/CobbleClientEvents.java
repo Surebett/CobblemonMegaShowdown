@@ -8,7 +8,9 @@ import com.cobblemon.mod.common.client.gui.interact.wheel.InteractWheelOption;
 import com.cobblemon.mod.common.pokemon.Pokemon;
 import com.github.yajatkaul.mega_showdown.MegaShowdown;
 import com.github.yajatkaul.mega_showdown.config.MegaShowdownConfig;
+import com.github.yajatkaul.mega_showdown.networking.server.packet.CrownPacket;
 import com.github.yajatkaul.mega_showdown.networking.server.packet.MegaEvoPacket;
+import com.github.yajatkaul.mega_showdown.networking.server.packet.PrimalEvoPacket;
 import com.github.yajatkaul.mega_showdown.networking.server.packet.UltraBurstPacket;
 import dev.architectury.networking.NetworkManager;
 import kotlin.Unit;
@@ -58,6 +60,38 @@ public class CobbleClientEvents {
                     () -> {
                         if (WheelDataClient.canUltra) {
                             NetworkManager.sendToServer(new UltraBurstPacket(event.getPokemonID()));
+                            closeGUI();
+                        }
+                        return Unit.INSTANCE;
+                    });
+            event.addFillingOption(wheelOption);
+        }
+        if (WheelDataClient.shouldPrimal) {
+            InteractWheelOption wheelOption = new InteractWheelOption(
+                    ResourceLocation.fromNamespaceAndPath(MegaShowdown.MOD_ID, "textures/gui/interact/primal_wheel.png"),
+                    null,
+                    WheelDataClient.canPrimal,
+                    "mega_showdown.ui.primal",
+                    () -> new Vector3f(1),
+                    () -> {
+                        if (WheelDataClient.canPrimal) {
+                            NetworkManager.sendToServer(new PrimalEvoPacket(event.getPokemonID()));
+                            closeGUI();
+                        }
+                        return Unit.INSTANCE;
+                    });
+            event.addFillingOption(wheelOption);
+        }
+        if (WheelDataClient.shouldCrown) {
+            InteractWheelOption wheelOption = new InteractWheelOption(
+                    ResourceLocation.fromNamespaceAndPath(MegaShowdown.MOD_ID, "textures/gui/interact/crown_wheel.png"),
+                    null,
+                    WheelDataClient.canCrown,
+                    "mega_showdown.ui.crown",
+                    () -> new Vector3f(1),
+                    () -> {
+                        if (WheelDataClient.canCrown) {
+                            NetworkManager.sendToServer(new CrownPacket(event.getPokemonID()));
                             closeGUI();
                         }
                         return Unit.INSTANCE;

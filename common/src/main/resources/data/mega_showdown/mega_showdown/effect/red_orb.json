@@ -4,7 +4,6 @@
     "sound_revert": {
       "sound_id": "minecraft:block.amethyst_block.chime"
     },
-    "particle_apply": "minecraft:end_rod",
     "animations": {
       "animations_revert": ["cry"]
     }
@@ -17,5 +16,6 @@
       "apply_delay": 4.8,
       "animations_apply": ["cry"]
     }
-  }
+  },
+  "battle_pause_apply": 4
 }

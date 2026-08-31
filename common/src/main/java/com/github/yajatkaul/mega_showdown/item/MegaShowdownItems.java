@@ -130,7 +130,7 @@ public class MegaShowdownItems {
     public static final RegistrySupplier<Item> DRAGALGITE = registerMegaStone("dragalgite");
     public static final RegistrySupplier<Item> FALINKSITE = registerMegaStone("falinksite");
 
-    public static final RegistrySupplier<Item> RED_ORB = registerFormChangeHeldItems(
+    public static final RegistrySupplier<Item> RED_ORB = registerFormChangeHeldHiddenItems(
             "red_orb",
             "reversion_state=standard",
             "reversion_state=primal",
@@ -140,7 +140,7 @@ public class MegaShowdownItems {
             null
     );
 
-    public static final RegistrySupplier<Item> BLUE_ORB = registerFormChangeHeldItems(
+    public static final RegistrySupplier<Item> BLUE_ORB = registerFormChangeHeldHiddenItems(
             "blue_orb",
             "reversion_state=standard",
             "reversion_state=primal",
@@ -795,10 +795,10 @@ public class MegaShowdownItems {
             true
     );
 
-    public static final RegistrySupplier<Item> RUSTED_SWORD = registerFormChangeHeldItems(
+    public static final RegistrySupplier<Item> RUSTED_SWORD = registerFormChangeHeldHiddenItems(
             "rusted_sword",
-            "crowned=false",
-            "crowned=true",
+            "behemoth_warrior=hero",
+            "behemoth_warrior=crowned",
             List.of("Zacian"),
             "mega_showdown:end_rod",
             true,
@@ -813,10 +813,10 @@ public class MegaShowdownItems {
             })
     );
 
-    public static final RegistrySupplier<Item> RUSTED_SHIELD = registerFormChangeHeldItems(
+    public static final RegistrySupplier<Item> RUSTED_SHIELD = registerFormChangeHeldHiddenItems(
             "rusted_shield",
-            "crowned=false",
-            "crowned=true",
+            "behemoth_warrior=hero",
+            "behemoth_warrior=crowned",
             List.of("Zamazenta"),
             "mega_showdown:end_rod",
             true,
@@ -1104,6 +1104,20 @@ public class MegaShowdownItems {
     private static RegistrySupplier<Item> registerFormChangeHeldItems(String name, String revertAspect, String applyAspect, List<String> pokemons, String effectId, boolean tradable, Consumer<Pokemon> callBack) {
         return ITEMS.register(name,
                 () -> new FormChangeHeldItem(
+                        new Item.Properties().arch$tab(MegaShowdownTabs.FORM_TAB),
+                        revertAspect,
+                        applyAspect,
+                        pokemons,
+                        effectId,
+                        tradable,
+                        callBack,
+                        null
+                ));
+    }
+
+    private static RegistrySupplier<Item> registerFormChangeHeldHiddenItems(String name, String revertAspect, String applyAspect, List<String> pokemons, String effectId, boolean tradable, Consumer<Pokemon> callBack) {
+        return ITEMS.register(name,
+                () -> new FormChangeHeldItemHidden(
                         new Item.Properties().arch$tab(MegaShowdownTabs.FORM_TAB),
                         revertAspect,
                         applyAspect,

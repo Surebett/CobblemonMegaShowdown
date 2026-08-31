@@ -1,6 +1,11 @@
 ({
   name: 'Rusted Shield',
   spritenum: 699,
+  onSwitchIn(pokemon) {
+    if (pokemon.isActive && pokemon.baseSpecies.name === "Zamazenta-Crowned") {
+      pokemon.formeChange("Zamazenta-Crowned");
+    }
+  },
   onStart(pokemon) {
     if (pokemon.baseSpecies.name !== 'Zamazenta-Crowned') return;
     const size = pokemon.moveSlots.length;

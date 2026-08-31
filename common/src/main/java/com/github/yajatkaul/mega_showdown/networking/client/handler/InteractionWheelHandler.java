@@ -11,5 +11,11 @@ public class InteractionWheelHandler {
 
         WheelDataClient.canMega = packet.canMega();
         WheelDataClient.canUltra = packet.canUltra();
+
+        WheelDataClient.shouldCrown = packet.shouldCrown();
+        WheelDataClient.shouldPrimal = packet.shouldPrimal();
+
+        WheelDataClient.canCrown = packet.canCrown();
+        WheelDataClient.canPrimal = packet.canPrimal();
     }
 }

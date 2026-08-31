@@ -1,6 +1,11 @@
 ({
   name: 'Rusted Sword',
   spritenum: 698,
+  onSwitchIn(pokemon) {
+    if (pokemon.isActive && pokemon.baseSpecies.name === "Zacian-Crowned") {
+        pokemon.formeChange("Zacian-Crowned");
+    }
+  },
   onStart(pokemon) {
     if (pokemon.baseSpecies.name !== 'Zacian-Crowned') return;
     const size = pokemon.moveSlots.length;

@@ -8,6 +8,7 @@ import com.cobblemon.mod.common.battles.dispatch.InstructionSet;
 import com.cobblemon.mod.common.battles.dispatch.InterpreterInstruction;
 import com.cobblemon.mod.common.battles.interpreter.instructions.IgnoredInstruction;
 import com.github.yajatkaul.mega_showdown.cobblemon.battle.instruction.MostlyIneffectiveInstruction;
+import com.github.yajatkaul.mega_showdown.cobblemon.battle.instruction.PrimalInstruction;
 import com.github.yajatkaul.mega_showdown.cobblemon.battle.instruction.SuperEffectiveInstruction;
 import com.github.yajatkaul.mega_showdown.cobblemon.battle.instruction.UltraInstruction;
 import kotlin.jvm.functions.Function4;
@@ -55,6 +56,9 @@ public class ShowdownInterpreterMixin {
                 return new IgnoredInstruction();
             }
         });
+
+        updateInstructionParser.put("-primal", (battle, instructionSet, message, messageIterator)
+                -> new PrimalInstruction());
 
         updateInstructionParser.put("-candynamax", (battle, instructionSet, message, messageIterator)
                 -> new IgnoredInstruction());

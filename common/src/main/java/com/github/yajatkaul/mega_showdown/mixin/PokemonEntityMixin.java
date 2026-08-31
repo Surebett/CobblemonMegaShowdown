@@ -7,7 +7,6 @@ import com.github.yajatkaul.mega_showdown.gimmick.CrownGimmick;
 import com.github.yajatkaul.mega_showdown.gimmick.MegaGimmick;
 import com.github.yajatkaul.mega_showdown.gimmick.PrimalGimmick;
 import com.github.yajatkaul.mega_showdown.gimmick.UltraGimmick;
-import com.github.yajatkaul.mega_showdown.item.MegaShowdownItems;
 import com.github.yajatkaul.mega_showdown.networking.client.packet.InteractionWheelPacket;
 import com.github.yajatkaul.mega_showdown.render.layerEntities.states.TeraCrystalState;
 import com.github.yajatkaul.mega_showdown.utils.duck.cobblemon.interfaces.PokemonEntityDuck;

@@ -5,7 +5,9 @@ import com.github.yajatkaul.mega_showdown.config.MegaShowdownConfig;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
-import java.io.*;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;

@@ -1,9 +1,7 @@
 package com.github.yajatkaul.mega_showdown.networking.server.handler;
 
 import com.cobblemon.mod.common.pokemon.Pokemon;
-import com.github.yajatkaul.mega_showdown.gimmick.MegaGimmick;
 import com.github.yajatkaul.mega_showdown.gimmick.PrimalGimmick;
-import com.github.yajatkaul.mega_showdown.networking.server.packet.MegaEvoPacket;
 import com.github.yajatkaul.mega_showdown.networking.server.packet.PrimalEvoPacket;
 import com.github.yajatkaul.mega_showdown.utils.PlayerUtils;
 import dev.architectury.networking.NetworkManager;

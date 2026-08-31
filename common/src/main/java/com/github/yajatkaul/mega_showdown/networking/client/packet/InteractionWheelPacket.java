@@ -2,7 +2,6 @@ package com.github.yajatkaul.mega_showdown.networking.client.packet;
 
 import com.github.yajatkaul.mega_showdown.MegaShowdown;
 import io.netty.buffer.ByteBuf;
-import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.resources.ResourceLocation;
@@ -50,14 +49,14 @@ public record InteractionWheelPacket(
                 public void encode(ByteBuf buf, InteractionWheelPacket packet) {
                     int flags = 0;
 
-                    if (packet.shouldMega())   flags |= 1;
-                    if (packet.shouldUltra())  flags |= 1 << 1;
-                    if (packet.canMega())      flags |= 1 << 2;
-                    if (packet.canUltra())     flags |= 1 << 3;
+                    if (packet.shouldMega()) flags |= 1;
+                    if (packet.shouldUltra()) flags |= 1 << 1;
+                    if (packet.canMega()) flags |= 1 << 2;
+                    if (packet.canUltra()) flags |= 1 << 3;
                     if (packet.shouldPrimal()) flags |= 1 << 4;
-                    if (packet.shouldCrown())  flags |= 1 << 5;
-                    if (packet.canPrimal())    flags |= 1 << 6;
-                    if (packet.canCrown())     flags |= 1 << 7;
+                    if (packet.shouldCrown()) flags |= 1 << 5;
+                    if (packet.canPrimal()) flags |= 1 << 6;
+                    if (packet.canCrown()) flags |= 1 << 7;
 
                     buf.writeByte(flags);
                 }

@@ -51,9 +51,9 @@ public class PokemonRendererMixin {
     @Unique
     private final Set<String> mega_showdown$teraCrystalAspects = new HashSet<>();
     @Unique
-    private DynamaxCloudsLayer mega_showdown$dynamaxCloudsLayer = new DynamaxCloudsLayer();
+    private final DynamaxCloudsLayer mega_showdown$dynamaxCloudsLayer = new DynamaxCloudsLayer();
     @Unique
-    private TeraHatsLayer mega_showdown$teraHatsLayer = new TeraHatsLayer();
+    private final TeraHatsLayer mega_showdown$teraHatsLayer = new TeraHatsLayer();
     //
 
     @Inject(method = "<init>", at = @At(value = "RETURN"))

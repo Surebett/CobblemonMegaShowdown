@@ -6,7 +6,6 @@ import com.cobblemon.mod.common.pokemon.Pokemon;
 import com.github.yajatkaul.mega_showdown.MegaShowdown;
 import com.github.yajatkaul.mega_showdown.client.battle.storage.BattlePokemonMemory;
 import com.github.yajatkaul.mega_showdown.utils.TypeEffectivenessUtils;
-import com.google.common.collect.Iterables;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;

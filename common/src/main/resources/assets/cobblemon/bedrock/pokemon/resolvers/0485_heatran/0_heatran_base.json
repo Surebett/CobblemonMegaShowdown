@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:heatran",
+  "order": 0,
+  "variations": [
+    {
+      "poser": "cobblemon:heatran",
+      "model": "cobblemon:heatran.geo",
+      "texture": "cobblemon:textures/pokemon/0485_heatran/heatran.png"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0485_heatran/heatran_shiny.png"
+    }
+  ]
+}

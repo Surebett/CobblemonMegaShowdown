@@ -4,7 +4,9 @@ import com.github.yajatkaul.mega_showdown.config.MegaShowdownConfig;
 import com.github.yajatkaul.mega_showdown.datapack.MegaShowdownDatapackRegister;
 import com.github.yajatkaul.mega_showdown.gimmick.MaxGimmick;
 import com.github.yajatkaul.mega_showdown.networking.client.packet.ConfigSyncPacket;
+import com.github.yajatkaul.mega_showdown.networking.client.packet.EffectivenessSyncPacket;
 import com.github.yajatkaul.mega_showdown.utils.ShowdownItemsLoad;
+import com.github.yajatkaul.mega_showdown.utils.TypeEffectivenessUtils;
 import dev.architectury.event.events.common.LifecycleEvent;
 import dev.architectury.event.events.common.PlayerEvent;
 import dev.architectury.event.events.common.TickEvent;
@@ -20,6 +22,9 @@ public class MinecraftEvents {
 
         TickEvent.SERVER_PRE.register(MaxGimmick::updateScalingAnimations);
 
-        PlayerEvent.PLAYER_JOIN.register((ServerPlayer player) -> NetworkManager.sendToPlayer(player, new ConfigSyncPacket(MegaShowdownConfig.outSideMega, MegaShowdownConfig.outSideUltraBurst)));
+        PlayerEvent.PLAYER_JOIN.register((ServerPlayer player) -> {
+            NetworkManager.sendToPlayer(player, new ConfigSyncPacket(MegaShowdownConfig.outSideMega, MegaShowdownConfig.outSideUltraBurst));
+            NetworkManager.sendToPlayer(player, new EffectivenessSyncPacket(TypeEffectivenessUtils.typeChartMap));
+        });
     }
 }

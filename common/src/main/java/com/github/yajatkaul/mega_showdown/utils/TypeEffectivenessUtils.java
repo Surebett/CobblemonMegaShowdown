@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class TypeEffectivenessUtils {
-    public static final Map<String, Map<String, Double>> typeChartMap = new HashMap<>();
+    public static Map<String, Map<String, Double>> typeChartMap = new HashMap<>();
 
     /**
      * Effectiveness of a single attacking type against a single pure defending type.

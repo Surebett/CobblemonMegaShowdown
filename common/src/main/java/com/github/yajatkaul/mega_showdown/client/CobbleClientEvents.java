@@ -68,7 +68,7 @@ public class CobbleClientEvents {
         }
         if (WheelDataClient.shouldPrimal) {
             InteractWheelOption wheelOption = new InteractWheelOption(
-                    ResourceLocation.fromNamespaceAndPath(MegaShowdown.MOD_ID, "textures/gui/interact/primal_wheel.png"),
+                    ResourceLocation.fromNamespaceAndPath(MegaShowdown.MOD_ID, "textures/gui/interact/" + (pokemon.getSpecies().getName().equals("Kyogre") ? "kyogre_primal.png" : "groudon_primal.png")),
                     null,
                     WheelDataClient.canPrimal,
                     "mega_showdown.ui.primal",
@@ -84,7 +84,7 @@ public class CobbleClientEvents {
         }
         if (WheelDataClient.shouldCrown) {
             InteractWheelOption wheelOption = new InteractWheelOption(
-                    ResourceLocation.fromNamespaceAndPath(MegaShowdown.MOD_ID, "textures/gui/interact/crown_wheel.png"),
+                    ResourceLocation.fromNamespaceAndPath(MegaShowdown.MOD_ID, "textures/gui/interact/"  + (pokemon.getSpecies().getName().equals("Zacian") ? "zacian_crown.png" : "zamazenta_crown.png")),
                     null,
                     WheelDataClient.canCrown,
                     "mega_showdown.ui.crown",

@@ -108,6 +108,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(MegaShowdownItems.WATERIUM_Z.get());
 
         tag(MegaShowdownTags.Items.MEGA_STONE)
+                .add(MegaShowdownItems.ABOMASITE.get())
                 .add(MegaShowdownItems.ABSOLITE.get())
                 .add(MegaShowdownItems.AERODACTYLITE.get())
                 .add(MegaShowdownItems.AGGRONITE.get())

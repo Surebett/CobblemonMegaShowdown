@@ -2,3 +2,5 @@
 - Made groudon, kyogre, zacian, zamazenta optional
 - Added heatran from PlanetaCobblemonFreePack
 - Fixed effectivness causing crash on multiplayer
+- Added abomosnow mega stone in mega tag
+- Fixed mega delphox shiny texture AGAIN

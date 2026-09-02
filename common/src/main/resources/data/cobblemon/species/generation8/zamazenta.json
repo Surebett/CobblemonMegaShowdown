@@ -17,6 +17,9 @@
   },
   "catchRate": 10,
   "maleRatio": -1,
+  "aspects": [
+    "hero"
+  ],
   "shoulderMountable": false,
   "riding": {
     "behaviours": {
@@ -214,6 +217,5 @@
   "height": 29,
   "weight": 2100,
   "dynamaxBlocked": true,
-  "aspects": [],
   "cannotDynamax": true
 }

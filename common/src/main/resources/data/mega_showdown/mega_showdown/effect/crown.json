@@ -1,21 +1,16 @@
 {
   "minecraft": {
-    "particle_revert": "minecraft:bubble",
+    "particle_apply": "minecraft:end_rod",
+    "particle_revert": "minecraft:end_rod",
+    "sound_apply": {
+      "sound_id": "minecraft:block.amethyst_block.chime"
+    },
     "sound_revert": {
       "sound_id": "minecraft:block.amethyst_block.chime"
     },
     "animations": {
+      "animations_apply": ["cry"],
       "animations_revert": ["cry"]
     }
-  },
-  "snowstorm": {
-    "source_apply": ["target"],
-    "particle_apply": "cobblemon:primal_kyogre",
-    "apply_after": 4.8,
-    "animations": {
-      "apply_delay": 4.8,
-      "animations_apply": ["cry"]
-    }
-  },
-  "battle_pause_apply": 4
+  }
 }

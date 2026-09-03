@@ -15,11 +15,11 @@ public class TypeEffectivenessUtils {
 
         Map<String, Double> defenderChart = typeChartMap.get(defendingType);
         if (defenderChart == null) {
-            throw new IllegalArgumentException("Unknown defending type: " + defendingType);
+            return -99.0;
         }
         Double multiplier = defenderChart.get(attackingType);
         if (multiplier == null) {
-            throw new IllegalArgumentException("Unknown attacking type: " + attackingType);
+            return -99.0;
         }
         return multiplier;
     }

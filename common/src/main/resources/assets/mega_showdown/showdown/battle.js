@@ -2218,11 +2218,11 @@ class Battle {
         this.add("start");
         for (const pokemon of this.getAllPokemon()) {
           let rawSpecies = null;
-          if (pokemon.species.id === "zacian" && pokemon.item === "rustedsword") {
-            rawSpecies = this.dex.species.get("Zacian-Crowned");
-          } else if (pokemon.species.id === "zamazenta" && pokemon.item === "rustedshield") {
-            rawSpecies = this.dex.species.get("Zamazenta-Crowned");
-          }
+//          if (pokemon.species.id === "zacian" && pokemon.item === "rustedsword") {
+//            rawSpecies = this.dex.species.get("Zacian-Crowned");
+//          } else if (pokemon.species.id === "zamazenta" && pokemon.item === "rustedshield") {
+//            rawSpecies = this.dex.species.get("Zamazenta-Crowned");
+//          }
           if (!rawSpecies)
             continue;
           const species = pokemon.setSpecies(rawSpecies);

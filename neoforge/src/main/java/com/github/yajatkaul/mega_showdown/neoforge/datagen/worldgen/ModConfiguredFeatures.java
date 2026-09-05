@@ -2,6 +2,7 @@ package com.github.yajatkaul.mega_showdown.neoforge.datagen.worldgen;
 
 import com.github.yajatkaul.mega_showdown.MegaShowdown;
 import com.github.yajatkaul.mega_showdown.block.MegaShowdownBlocks;
+import com.github.yajatkaul.mega_showdown.block.custom.MaxMushroomBlock;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
@@ -22,16 +23,16 @@ public class ModConfiguredFeatures {
 
         register(context, MAX_MUSHROOM_KEY, Feature.RANDOM_PATCH,
                 new RandomPatchConfiguration(
-                        3, // <- EXACTLY 3 placement attempts
-                        2, // xz spread
-                        1, // y spread
+                        6, // <- EXACTLY 3 placement attempts
+                        3, // xz spread
+                        2, // y spread
                         PlacementUtils.onlyWhenEmpty(
                                 Feature.SIMPLE_BLOCK,
                                 new SimpleBlockConfiguration(
                                         BlockStateProvider.simple(
                                                 MegaShowdownBlocks.MAX_MUSHROOM.get()
                                                         .defaultBlockState()
-                                                        .setValue(SweetBerryBushBlock.AGE, 3)
+                                                        .setValue(MaxMushroomBlock.AGE, 3)
                                         )
                                 )
                         )

@@ -21,10 +21,10 @@ public class ModPlacedFeatures {
 
         register(context, MAX_MUSHROOM_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MAX_MUSHROOM_KEY),
                 List.of(
-                        CountPlacement.of(2),
-                        RarityFilter.onAverageOnceEvery(2),
+                        RarityFilter.onAverageOnceEvery(1), // <- THE rarity knob. Tune this alone.
+                        CountPlacement.of(10),                 // one roll per chunk that passes the filter
                         InSquarePlacement.spread(),
-                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-40), VerticalAnchor.absolute(0)),
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-63), VerticalAnchor.absolute(60)), // full lush caves range
                         BiomeFilter.biome()));
     }
 

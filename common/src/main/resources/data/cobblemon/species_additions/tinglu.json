@@ -1,0 +1,10 @@
+{
+  "implemented": true,
+  "target": "cobblemon:tinglu",
+  "baseScale": 1,
+  "hitbox": {
+    "width": 1.5,
+    "height": 1.5,
+    "fixed": false
+  }
+}

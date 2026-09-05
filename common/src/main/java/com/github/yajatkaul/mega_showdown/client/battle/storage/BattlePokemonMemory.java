@@ -6,6 +6,7 @@ import com.cobblemon.mod.common.api.moves.MoveSet;
 import com.cobblemon.mod.common.api.moves.MoveTemplate;
 import com.cobblemon.mod.common.api.moves.Moves;
 import com.cobblemon.mod.common.api.pokemon.PokemonProperties;
+import com.cobblemon.mod.common.client.battle.ClientBattlePokemon;
 import com.cobblemon.mod.common.client.gui.PokemonGuiUtilsKt;
 import com.cobblemon.mod.common.client.gui.TypeIcon;
 import com.cobblemon.mod.common.client.render.RenderHelperKt;
@@ -25,6 +26,7 @@ import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.CommonColors;
 import net.minecraft.util.Mth;
+import net.minecraft.world.item.ItemStack;
 import org.joml.Quaternionf;
 import org.joml.Vector3f;
 
@@ -91,6 +93,10 @@ public class BattlePokemonMemory {
 
     public void setRenderablePokemon(RenderablePokemon renderablePokemon) {
         this.renderablePokemon = renderablePokemon;
+    }
+
+    public void setRenderablePokemon(ClientBattlePokemon pokemon) {
+        this.renderablePokemon = new RenderablePokemon(pokemon.getSpecies(), pokemon.getState().getCurrentAspects(), ItemStack.EMPTY);
     }
 
     public boolean isActive() {

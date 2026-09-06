@@ -1,4 +1,3 @@
-# 1.0+1.8+1.21.1-BETA
-- Added tinglu from PlanetaCobblemonFreePack animated by @algodaodoce
-- Updated for 1.8 cobblemon
-- Fixed custom types crashing in BattleHUD
+# 1.0+1.8+1.21.1-BETA2
+- Fixed max honey missing in creative menu
+- Fixed texture issues

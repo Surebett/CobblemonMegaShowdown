@@ -33,7 +33,7 @@ public abstract class PokemonSelectingBlockItem extends ToolTipBlockItem impleme
         ItemStack stack = user.getItemInHand(hand);
 
         if (!world.isClientSide && user instanceof ServerPlayer serverPlayer) {
-            return this.use(serverPlayer, stack);
+            return this.use(serverPlayer, stack, true);
         }
 
         return InteractionResultHolder.success(stack);

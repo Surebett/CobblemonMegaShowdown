@@ -22,7 +22,7 @@
         "mega",
         "shiny"
       ],
-      "texture": "cobblemon:textures/pokemon/0623_golurk/golurk_mega.png",
+      "texture": "cobblemon:textures/pokemon/0623_golurk/golurk_mega_shiny.png",
       "layers": [
         {
           "name": "color",

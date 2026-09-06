@@ -16,7 +16,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.levelgen.GenerationStep;
-import com.cobblemon.mod.relocations.graalvm.polyglot.Value;
+import org.graalvm.polyglot.Value;
 
 public final class MegaShowdownFabric implements ModInitializer {
     public static void generateModWorldGen() {

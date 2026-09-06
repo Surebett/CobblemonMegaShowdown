@@ -168,6 +168,27 @@ function receiveTypeChartData(typeChartId, typeChartData) {
       ...(parsed.HPdvs ?? {}),
     },
   };
+
+  Dex.data.TypeChart[typeChartId] = {
+    ...existing,
+
+    // merge damageTaken instead of replacing it
+    damageTaken: {
+      ...(existing.damageTaken ?? {}),
+      ...(parsed.damageTaken ?? {}),
+    },
+
+    // merge other fields normally
+    HPivs: {
+      ...(existing.HPivs ?? {}),
+      ...(parsed.HPivs ?? {}),
+    },
+
+    HPdvs: {
+      ...(existing.HPdvs ?? {}),
+      ...(parsed.HPdvs ?? {}),
+    },
+  };
 }
 
 function receiveScriptData(scriptId, scriptData) {

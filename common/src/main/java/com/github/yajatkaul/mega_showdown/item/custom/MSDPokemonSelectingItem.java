@@ -27,7 +27,7 @@ public abstract class MSDPokemonSelectingItem extends ToolTipItem implements Pok
     @Override
     public @NotNull InteractionResultHolder<ItemStack> use(Level world, Player user, InteractionHand hand) {
         if (user instanceof ServerPlayer serverPlayer) {
-            return this.use(serverPlayer, user.getItemInHand(hand));
+            return this.use(serverPlayer, user.getItemInHand(hand), true);
         }
         return InteractionResultHolder.success(user.getItemInHand(hand));
     }

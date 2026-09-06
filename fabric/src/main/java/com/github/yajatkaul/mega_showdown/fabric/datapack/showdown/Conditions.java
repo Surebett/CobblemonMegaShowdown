@@ -11,7 +11,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.server.packs.resources.ResourceManager;
-import com.cobblemon.mod.relocations.graalvm.polyglot.Value;
+import org.graalvm.polyglot.Value;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.BufferedReader;

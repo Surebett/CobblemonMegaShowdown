@@ -35,6 +35,8 @@ object NewMove {
                 effectChances += secondaryMember.get("chance").asDouble
             }
         }
+        val weightMember = moveData.get("weight")
+        val weight: Float = weightMember?.takeIf { !it.isJsonNull }?.asFloat ?: 0f
 
         val move = MoveTemplate(
             id,
@@ -47,7 +49,8 @@ object NewMove {
             pp,
             priority,
             critRatio,
-            effectChances.toTypedArray()
+            effectChances.toTypedArray(),
+            weight
         )
 
         return move

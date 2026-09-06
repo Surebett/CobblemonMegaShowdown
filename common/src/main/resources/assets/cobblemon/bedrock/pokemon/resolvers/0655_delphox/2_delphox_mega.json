@@ -8,14 +8,42 @@
       ],
       "poser": "cobblemon:delphoxmega",
       "model": "cobblemon:delphoxmega.geo",
-      "texture": "cobblemon:textures/pokemon/0655_delphox/delphox_mega.png"
+      "texture": "cobblemon:textures/pokemon/0655_delphox/delphox_mega.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/blank.png",
+          "translucent": true
+        }
+      ]
     },
     {
       "aspects": [
         "mega",
         "shiny"
       ],
-      "texture": "cobblemon:textures/pokemon/0655_delphox/delphox_mega_shiny.png"
+      "texture": "cobblemon:textures/pokemon/0655_delphox/delphox_mega_shiny.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/blank.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/blank.png",
+          "emissive": true
+        }
+      ]
     }
   ]
 }

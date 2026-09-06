@@ -30,7 +30,7 @@ import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.Items
 import net.minecraft.world.level.Level
 
-class MaxHoney(properties: Properties) : ToolTipItem(Properties()), HealingSource {
+class MaxHoney(properties: Properties) : ToolTipItem(properties), HealingSource {
     val bagItem = object : BagItem {
         override val itemName = "item.mega_showdown.max_honey"
         override val returnItem = Items.AIR

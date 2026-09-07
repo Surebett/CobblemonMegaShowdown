@@ -95,7 +95,7 @@ def resolveEnv = { String key ->
 
 publishMods {
     changelog = file("CHANGELOG.md").text
-    type = BETA
+    type = STABLE
 
     String modrinthToken = resolveEnv("MODRINTH_TOKEN")
     String curseforgeToken = resolveEnv("CURSEFORGE_TOKEN")

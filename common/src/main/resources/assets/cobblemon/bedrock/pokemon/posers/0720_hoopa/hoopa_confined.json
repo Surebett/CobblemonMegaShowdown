@@ -1,0 +1,29 @@
+{
+  "head": "looky",
+  "portraitScale": 1.95,
+  "portraitTranslation": [-0.3, -0.38, 0.0],
+  "profileScale": 0.85,
+  "profileTranslation": [0.0, 0.3, 0.0],
+  "animations": {
+    "cry": "q.bedrock_stateful('hoopa_confined', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "transformTicks": 10,
+      "animations": ["q.bedrock('hoopa_confined', 'ground_idle')"],
+      "quirks": [
+        "q.bedrock_quirk('hoopa_confined', 'blink', 2, 7, 1)",
+        "q.bedrock_quirk('hoopa_confined', 'quirk', 8, 16, 1)'"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK", "FLY"],
+      "animations": ["bedrock(hoopa_confined, walk_ground)"],
+      "quirks": [
+        "q.bedrock_quirk('hoopa_confined', 'blink', 2, 7, 1)"
+      ]
+    }
+  }
+}

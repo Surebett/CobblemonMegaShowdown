@@ -3,15 +3,28 @@
   "order": 0,
   "variations": [
     {
-      "poser": "cobblemon:hoopa",
-      "model": "cobblemon:hoopa.geo",
-      "texture": "cobblemon:textures/pokemon/0720_hoopa/hoopa.png"
+      "aspects": [],
+      "poser": "cobblemon:hoopa_confined",
+      "model": "cobblemon:hoopa_confined.geo",
+      "texture": "cobblemon:textures/pokemon/0720_hoopa/hoopa.png",
+      "layers": [
+        {
+          "name": "translucent",
+          "translucent": true,
+          "texture": "cobblemon:textures/pokemon/blank.png"
+        }
+      ]
     },
     {
-      "aspects": [
-        "shiny"
-      ],
-      "texture": "cobblemon:textures/pokemon/0720_hoopa/hoopa_shiny.png"
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0720_hoopa/hoopa_shiny.png",
+      "layers": [
+        {
+          "name": "translucent",
+          "translucent": true,
+          "texture": "cobblemon:textures/pokemon/blank.png"
+        }
+      ]
     }
   ]
 }

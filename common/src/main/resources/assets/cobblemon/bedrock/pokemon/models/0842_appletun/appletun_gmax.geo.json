@@ -99,6 +99,14 @@
 					]
 				},
 				{
+					"name": "locator_eye_left",
+					"parent": "eye_left",
+					"pivot": [4.65, 68.75, -2.25],
+					"locators": {
+						"eye2": [4.65, 68.75, -2.25]
+					}
+				},
+				{
 					"name": "eye_right",
 					"parent": "eyes",
 					"pivot": [-4.83591, 68.59524, -2.01],
@@ -107,6 +115,14 @@
 						{"origin": [-4, 68.75, -2.01], "size": [2, 2, 0], "pivot": [-0.25, 63.75, -2], "rotation": [0, 0, -17.5], "uv": [58, 145]},
 						{"origin": [-7, 63.75, -2], "size": [7, 12, 0], "pivot": [-0.25, 63.75, -2], "rotation": [0, 0, -17.5], "uv": [104, 174]}
 					]
+				},
+				{
+					"name": "locator_eye_right",
+					"parent": "eye_right",
+					"pivot": [-4.75, 68.75, -2.25],
+					"locators": {
+						"eye1": [-4.75, 68.75, -2.25]
+					}
 				},
 				{
 					"name": "muzzle",

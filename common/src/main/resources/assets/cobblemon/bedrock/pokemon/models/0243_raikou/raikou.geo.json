@@ -6,7 +6,7 @@
 				"identifier": "geometry.unknown",
 				"texture_width": 128,
 				"texture_height": 128,
-				"visible_bounds_width": 5,
+				"visible_bounds_width": 8,
 				"visible_bounds_height": 3.5,
 				"visible_bounds_offset": [0, 1.25, 0]
 			},
@@ -430,6 +430,14 @@
 					]
 				},
 				{
+					"name": "locator_eye_right",
+					"parent": "right_eye",
+					"pivot": [-1.85, 28.8, -19.95],
+					"locators": {
+						"eye1": [-1.85, 28.8, -19.95]
+					}
+				},
+				{
 					"name": "left_eye",
 					"parent": "face",
 					"pivot": [1.8, 28.75, -20.05],
@@ -437,6 +445,14 @@
 						{"origin": [-0.88302, 28.29947, -20.67], "size": [1, 1, 0], "pivot": [-0.13302, 0.04947, -17.65], "rotation": [0, -45, 0], "uv": [112, 118]},
 						{"origin": [-1.38302, 27.79947, -20.66], "size": [2, 2, 0], "pivot": [-0.13302, 0.04947, -17.65], "rotation": [0, -45, 0], "uv": [111, 120]}
 					]
+				},
+				{
+					"name": "locator_eye_left",
+					"parent": "left_eye",
+					"pivot": [1.85, 28.8, -19.95],
+					"locators": {
+						"eye2": [1.85, 28.8, -19.95]
+					}
 				},
 				{
 					"name": "jaw",

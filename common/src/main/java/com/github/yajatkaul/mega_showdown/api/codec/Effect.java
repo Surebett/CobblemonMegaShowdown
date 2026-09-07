@@ -75,9 +75,9 @@ public record Effect(
             this.minecraft.get().apply(context.getEntity());
             this.snowStorm.get().apply(context.getEntity(), aspects, properties, other);
         } else if (this.minecraft().isPresent()) {
-            this.minecraft.get().apply(context.getEntity());
             AspectUtils.applyAspects(context, aspects);
             AspectUtils.applyProperties(context, properties);
+            this.minecraft.get().apply(context.getEntity());
         } else if (this.snowStorm().isPresent()) {
             this.snowStorm.get().apply(context.getEntity(), aspects, properties, other);
         } else {

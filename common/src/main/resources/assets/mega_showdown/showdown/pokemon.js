@@ -192,6 +192,7 @@ class Pokemon {
     this.baseStoredStats = null;
     this.storedStats = { atk: 0, def: 0, spa: 0, spd: 0, spe: 0 };
     this.boosts = { atk: 0, def: 0, spa: 0, spd: 0, spe: 0, accuracy: 0, evasion: 0 };
+    this.alphaBoosts = { atk: 0, def: 0, spa: 0, spd: 0, spe: 0, accuracy: 0, evasion: 0 };
     this.baseAbility = (0, import_dex.toID)(set.ability);
     this.ability = this.baseAbility;
     this.abilityState = { id: this.ability };
@@ -326,39 +327,43 @@ class Pokemon {
     return this.battle.modify(stat, modifier || 1);
   }
   getStat(statName, unboosted, unmodified) {
-    statName = (0, import_dex.toID)(statName);
-    if (statName === "hp")
-      throw new Error("Please read `maxhp` directly");
-    let stat = this.storedStats[statName];
-    if (unmodified && "wonderroom" in this.battle.field.pseudoWeather) {
-      if (statName === "def") {
-        statName = "spd";
-      } else if (statName === "spd") {
-        statName = "def";
+      statName = (0, import_dex.toID)(statName);
+      if (statName === "hp")
+        throw new Error("Please read `maxhp` directly");
+      let stat = this.storedStats[statName];
+      if (this.alphaBoosts[statName] > 0) {
+        const alphaBoostTable = [1, 1.5, 2, 2.5, 3, 3.5, 4];
+        stat = Math.floor(stat * alphaBoostTable[this.alphaBoosts[statName]]);
       }
-    }
-    if (!unboosted) {
-      const boosts = this.battle.runEvent("ModifyBoost", this, null, null, { ...this.boosts });
-      let boost = boosts[statName];
-      const boostTable = [1, 1.5, 2, 2.5, 3, 3.5, 4];
-      if (boost > 6)
-        boost = 6;
-      if (boost < -6)
-        boost = -6;
-      if (boost >= 0) {
-        stat = Math.floor(stat * boostTable[boost]);
-      } else {
-        stat = Math.floor(stat / boostTable[-boost]);
+      if (unmodified && "wonderroom" in this.battle.field.pseudoWeather) {
+        if (statName === "def") {
+          statName = "spd";
+        } else if (statName === "spd") {
+          statName = "def";
+        }
       }
+      if (!unboosted) {
+        const boosts = this.battle.runEvent("ModifyBoost", this, null, null, { ...this.boosts });
+        let boost = boosts[statName];
+        const boostTable = [1, 1.5, 2, 2.5, 3, 3.5, 4];
+        if (boost > 6)
+          boost = 6;
+        if (boost < -6)
+          boost = -6;
+        if (boost >= 0) {
+          stat = Math.floor(stat * boostTable[boost]);
+        } else {
+          stat = Math.floor(stat / boostTable[-boost]);
+        }
+      }
+      if (!unmodified) {
+        const statTable = { atk: "Atk", def: "Def", spa: "SpA", spd: "SpD", spe: "Spe" };
+        stat = this.battle.runEvent("Modify" + statTable[statName], this, null, null, stat);
+      }
+      if (statName === "spe" && stat > 1e4 && !this.battle.format.battle?.trunc)
+        stat = 1e4;
+      return stat;
     }
-    if (!unmodified) {
-      const statTable = { atk: "Atk", def: "Def", spa: "SpA", spd: "SpD", spe: "Spe" };
-      stat = this.battle.runEvent("Modify" + statTable[statName], this, null, null, stat);
-    }
-    if (statName === "spe" && stat > 1e4 && !this.battle.format.battle?.trunc)
-      stat = 1e4;
-    return stat;
-  }
   getActionSpeed() {
     let speed = this.getStat("spe", false, false);
     if (this.battle.field.getPseudoWeather("trickroom")) {

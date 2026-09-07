@@ -6,11 +6,22 @@
   "maleRatio": -1,
   "height": 24,
   "weight": 2300,
-  "pokedex": ["cobblemon.species.necrozma.desc"],
-  "labels": ["gen7", "legendary", "restricted"],
+  "pokedex": [
+    "cobblemon.species.necrozma.desc"
+  ],
+  "labels": [
+    "gen7",
+    "legendary",
+    "restricted"
+  ],
   "aspects": [],
-  "abilities": ["prismarmor", "h:prismarmor"],
-  "eggGroups": ["undiscovered"],
+  "abilities": [
+    "prismarmor",
+    "h:prismarmor"
+  ],
+  "eggGroups": [
+    "undiscovered"
+  ],
   "baseStats": {
     "hp": 97,
     "attack": 107,
@@ -214,7 +225,6 @@
     "tutor:stoneedge",
     "tutor:swift",
     "tutor:telekinesis",
-    "tutor:trick",
     "tutor:xscissor",
     "legacy:breakingswipe",
     "legacy:confide",
@@ -237,15 +247,23 @@
       "maleRatio": -1,
       "height": 38,
       "weight": 4600,
-      "pokedex": ["cobblemon.species.necrozma-duskmane.desc"],
+      "pokedex": [
+        "cobblemon.species.necrozma-duskmane.desc"
+      ],
       "baseScale": 1,
       "hitbox": {
         "width": 4,
         "height": 4,
         "fixed": false
       },
-      "labels": ["gen7", "legendary", "restricted"],
-      "aspects": ["dusk-fusion"],
+      "labels": [
+        "gen7",
+        "legendary",
+        "restricted"
+      ],
+      "aspects": [
+        "dusk-fusion"
+      ],
       "baseStats": {
         "hp": 97,
         "attack": 157,
@@ -388,7 +406,6 @@
         "tutor:stoneedge",
         "tutor:swift",
         "tutor:telekinesis",
-        "tutor:trick",
         "tutor:xscissor"
       ],
       "evolutions": [],
@@ -401,15 +418,23 @@
       "maleRatio": -1,
       "height": 42,
       "weight": 3500,
-      "pokedex": ["cobblemon.species.necrozma-dawnwings.desc"],
+      "pokedex": [
+        "cobblemon.species.necrozma-dawnwings.desc"
+      ],
       "baseScale": 1,
       "hitbox": {
         "width": 4,
         "height": 5,
         "fixed": false
       },
-      "labels": ["gen7", "legendary", "restricted"],
-      "aspects": ["dawn-fusion"],
+      "labels": [
+        "gen7",
+        "legendary",
+        "restricted"
+      ],
+      "aspects": [
+        "dawn-fusion"
+      ],
       "baseStats": {
         "hp": 97,
         "attack": 113,
@@ -552,7 +577,6 @@
         "tutor:stoneedge",
         "tutor:swift",
         "tutor:telekinesis",
-        "tutor:trick",
         "tutor:xscissor"
       ],
       "evolutions": [],
@@ -565,10 +589,22 @@
       "maleRatio": -1,
       "height": 75,
       "weight": 2300,
-      "pokedex": ["cobblemon.species.necrozma-ultra.desc"],
-      "labels": ["gen7", "legendary", "restricted", "ultra_burst"],
-      "aspects": ["ultra-fusion"],
-      "abilities": ["neuroforce", "h:neuroforce"],
+      "pokedex": [
+        "cobblemon.species.necrozma-ultra.desc"
+      ],
+      "labels": [
+        "gen7",
+        "legendary",
+        "restricted",
+        "ultra_burst"
+      ],
+      "aspects": [
+        "ultra-fusion"
+      ],
+      "abilities": [
+        "neuroforce",
+        "h:neuroforce"
+      ],
       "hitbox": {
         "width": 5,
         "height": 12,

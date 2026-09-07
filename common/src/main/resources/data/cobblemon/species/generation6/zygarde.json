@@ -7,35 +7,24 @@
   "maleRatio": -1,
   "height": 50,
   "weight": 3050,
-  "pokedex": ["cobblemon.species.zygarde.desc"],
-  "labels": ["gen6", "legendary", "restricted"],
-  "riding": {
-    "behaviours": {
-      "LAND": {
-        "key": "cobblemon:land/horse",
-        "rideSounds": [],
-        "stats": {
-          "ACCELERATION": "30-60",
-          "JUMP": "30-65",
-          "SKILL": "20-50",
-          "SPEED": "20-40",
-          "STAMINA": "90-130"
-        }
-      }
-    },
-    "seats": [
-      {
-        "offset": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        }
-      }
-    ]
-  },
-  "aspects": ["50-percent"],
-  "abilities": ["aurabreak", "h:aurabreak"],
-  "eggGroups": ["undiscovered"],
+  "pokedex": [
+    "cobblemon.species.zygarde.desc"
+  ],
+  "labels": [
+    "gen6",
+    "legendary",
+    "restricted"
+  ],
+  "aspects": [
+    "50-percent"
+  ],
+  "abilities": [
+    "aurabreak",
+    "h:aurabreak"
+  ],
+  "eggGroups": [
+    "undiscovered"
+  ],
   "baseStats": {
     "hp": 108,
     "attack": 100,
@@ -63,6 +52,26 @@
       "canSleep": true,
       "light": "0-4"
     }
+  },
+  "riding": {
+    "behaviours": {
+      "LAND": {
+        "key": "cobblemon:land/horse",
+        "rideSounds": [],
+        "stats": {
+          "ACCELERATION": "30-60",
+          "JUMP": "30-65",
+          "SKILL": "20-50",
+          "SPEED": "20-40",
+          "STAMINA": "90-130"
+        }
+      }
+    },
+    "seats": [
+      {
+        "locator": "seat_1"
+      }
+    ]
   },
   "baseExperienceYield": 300,
   "experienceGroup": "slow",
@@ -177,11 +186,9 @@
     "legacy:frustration",
     "legacy:hiddenpower",
     "legacy:return",
-    "legacy:rocksmash",
     "legacy:round",
     "legacy:secretpower",
     "legacy:snore",
-    "legacy:strength",
     "legacy:swagger",
     "legacy:toxic"
   ],
@@ -194,15 +201,23 @@
       "maleRatio": -1,
       "height": 12,
       "weight": 335,
-      "pokedex": ["cobblemon.species.zygarde-10.desc"],
+      "pokedex": [
+        "cobblemon.species.zygarde-10.desc"
+      ],
       "baseScale": 1,
       "hitbox": {
         "width": 2,
         "height": 2,
         "fixed": false
       },
-      "labels": ["gen7", "legendary", "restricted"],
-      "aspects": ["10-percent"],
+      "labels": [
+        "gen7",
+        "legendary",
+        "restricted"
+      ],
+      "aspects": [
+        "10-percent"
+      ],
       "baseStats": {
         "hp": 54,
         "attack": 100,
@@ -226,6 +241,22 @@
             "walkSpeed": 0.147
           }
         }
+      },
+      "riding": {
+        "behaviours": {
+          "LAND": {
+            "key": "cobblemon:land/horse",
+            "rideSounds": [],
+            "stats": {
+              "ACCELERATION": "30-60",
+              "JUMP": "30-65",
+              "SKILL": "20-50",
+              "SPEED": "20-40",
+              "STAMINA": "90-130"
+            }
+          }
+        },
+        "seats": []
       },
       "moves": [
         "1:bulldoze",
@@ -351,10 +382,22 @@
       "maleRatio": -1,
       "height": 12,
       "weight": 335,
-      "pokedex": ["cobblemon.species.zygarde-10c.desc"],
-      "labels": ["cobblemon", "legendary", "restricted"],
-      "aspects": ["power-construct", "10-percent"],
-      "abilities": ["powerconstruct", "h:powerconstruct"],
+      "pokedex": [
+        "cobblemon.species.zygarde-10c.desc"
+      ],
+      "labels": [
+        "cobblemon",
+        "legendary",
+        "restricted"
+      ],
+      "aspects": [
+        "power-construct",
+        "10-percent"
+      ],
+      "abilities": [
+        "powerconstruct",
+        "h:powerconstruct"
+      ],
       "baseStats": {
         "hp": 54,
         "attack": 100,
@@ -368,6 +411,22 @@
           "canSleep": true,
           "light": "0-4"
         }
+      },
+      "riding": {
+        "behaviours": {
+          "LAND": {
+            "key": "cobblemon:land/horse",
+            "rideSounds": [],
+            "stats": {
+              "ACCELERATION": "30-60",
+              "JUMP": "30-65",
+              "SKILL": "20-50",
+              "SPEED": "20-40",
+              "STAMINA": "90-130"
+            }
+          }
+        },
+        "seats": []
       },
       "baseExperienceYield": 243,
       "moves": [
@@ -482,15 +541,47 @@
       "maleRatio": -1,
       "height": 50,
       "weight": 3050,
-      "pokedex": ["cobblemon.species.zygarde-50c.desc"],
-      "labels": ["cobblemon", "legendary", "restricted"],
-      "aspects": ["50-percent", "power-construct"],
-      "abilities": ["powerconstruct", "h:powerconstruct"],
+      "pokedex": [
+        "cobblemon.species.zygarde-50c.desc"
+      ],
+      "labels": [
+        "cobblemon",
+        "legendary",
+        "restricted"
+      ],
+      "aspects": [
+        "50-percent",
+        "power-construct"
+      ],
+      "abilities": [
+        "powerconstruct",
+        "h:powerconstruct"
+      ],
       "behaviour": {
         "resting": {
           "canSleep": true,
           "light": "0-4"
         }
+      },
+      "riding": {
+        "behaviours": {
+          "LAND": {
+            "key": "cobblemon:land/horse",
+            "rideSounds": [],
+            "stats": {
+              "ACCELERATION": "30-60",
+              "JUMP": "30-65",
+              "SKILL": "20-50",
+              "SPEED": "20-40",
+              "STAMINA": "90-130"
+            }
+          }
+        },
+        "seats": [
+          {
+            "locator": "seat_1"
+          }
+        ]
       },
       "moves": [
         "1:bulldoze",
@@ -604,16 +695,27 @@
       "maleRatio": -1,
       "height": 45,
       "weight": 6100,
-      "pokedex": ["cobblemon.species.zygarde-complete.desc"],
+      "pokedex": [
+        "cobblemon.species.zygarde-complete.desc"
+      ],
       "baseScale": 1,
       "hitbox": {
         "width": 2,
         "height": 5,
         "fixed": false
       },
-      "labels": ["gen7", "legendary", "restricted"],
-      "aspects": ["complete-percent"],
-      "abilities": ["powerconstruct", "h:powerconstruct"],
+      "labels": [
+        "gen7",
+        "legendary",
+        "restricted"
+      ],
+      "aspects": [
+        "complete-percent"
+      ],
+      "abilities": [
+        "powerconstruct",
+        "h:powerconstruct"
+      ],
       "baseStats": {
         "hp": 216,
         "attack": 100,
@@ -621,6 +723,22 @@
         "special_attack": 91,
         "special_defence": 95,
         "speed": 85
+      },
+      "riding": {
+        "behaviours": {
+          "LAND": {
+            "key": "cobblemon:land/horse",
+            "rideSounds": [],
+            "stats": {
+              "ACCELERATION": "30-60",
+              "JUMP": "30-65",
+              "SKILL": "20-50",
+              "SPEED": "20-40",
+              "STAMINA": "90-130"
+            }
+          }
+        },
+        "seats": []
       },
       "baseExperienceYield": 354,
       "moves": [
@@ -736,7 +854,9 @@
         "height": 1,
         "fixed": false
       },
-      "aspects": ["core-percent"],
+      "aspects": [
+        "core-percent"
+      ],
       "baseStats": {
         "hp": 1,
         "attack": 1,
@@ -745,7 +865,25 @@
         "special_defence": 1,
         "speed": 1
       },
-      "moves": ["1:bulldoze"],
+      "moves": [
+        "1:bulldoze"
+      ],
+      "riding": {
+        "behaviours": {
+          "LAND": {
+            "key": "cobblemon:land/horse",
+            "rideSounds": [],
+            "stats": {
+              "ACCELERATION": "30-60",
+              "JUMP": "30-65",
+              "SKILL": "20-50",
+              "SPEED": "20-40",
+              "STAMINA": "90-130"
+            }
+          }
+        },
+        "seats": []
+      },
       "evolutions": [],
       "battleOnly": true
     }

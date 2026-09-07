@@ -10,7 +10,6 @@
   "pokedex": [
     "cobblemon.species.enamorus.desc"
   ],
-  
   "labels": [
     "gen8a",
     "legendary"
@@ -104,7 +103,6 @@
     "tm:mysticalfire",
     "tm:outrage",
     "tm:playrough",
-    "tm:powershift",
     "tm:protect",
     "tm:psychic",
     "tm:psychup",
@@ -137,7 +135,6 @@
     "tutor:mysticalfire",
     "tutor:outrage",
     "tutor:playrough",
-    "tutor:powershift",
     "tutor:psychic",
     "tutor:rest",
     "tutor:rocksmash",
@@ -147,7 +144,8 @@
     "tutor:tailwind",
     "tutor:twister",
     "tutor:uproar",
-    "tutor:zenheadbutt"
+    "tutor:zenheadbutt",
+    "legacy:powershift"
   ],
   "evolutions": [],
   "forms": [

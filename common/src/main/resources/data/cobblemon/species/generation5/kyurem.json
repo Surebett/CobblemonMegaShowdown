@@ -7,11 +7,22 @@
   "maleRatio": -1,
   "height": 30,
   "weight": 3250,
-  "pokedex": ["cobblemon.species.kyurem.desc"],
-  "labels": ["gen5", "legendary", "restricted"],
+  "pokedex": [
+    "cobblemon.species.kyurem.desc"
+  ],
+  "labels": [
+    "gen5",
+    "legendary",
+    "restricted"
+  ],
   "aspects": [],
-  "abilities": ["pressure", "h:pressure"],
-  "eggGroups": ["undiscovered"],
+  "abilities": [
+    "pressure",
+    "h:pressure"
+  ],
+  "eggGroups": [
+    "undiscovered"
+  ],
   "riding": {
     "behaviours": {
       "LAND": {
@@ -227,10 +238,21 @@
       "maleRatio": -1,
       "height": 36,
       "weight": 3250,
-      "pokedex": ["cobblemon.species.kyurem-white.desc"],
-      "labels": ["gen5", "legendary", "restricted"],
-      "aspects": ["white-fusion"],
-      "abilities": ["turboblaze", "h:turboblaze"],
+      "pokedex": [
+        "cobblemon.species.kyurem-white.desc"
+      ],
+      "labels": [
+        "gen5",
+        "legendary",
+        "restricted"
+      ],
+      "aspects": [
+        "white-fusion"
+      ],
+      "abilities": [
+        "turboblaze",
+        "h:turboblaze"
+      ],
       "baseStats": {
         "hp": 125,
         "attack": 120,
@@ -259,11 +281,11 @@
         "24:dragonpulse",
         "32:icebeam",
         "40:hypervoice",
-        "form_change:fusionflare",
+        "48:fusionflare",
         "56:blizzard",
         "64:imprison",
         "72:outrage",
-        "form_change:iceburn",
+        "80:iceburn",
         "88:sheercold",
         "tm:aerialace",
         "tm:ancientpower",
@@ -375,7 +397,6 @@
         "legacy:snore",
         "legacy:swagger",
         "legacy:toxic"
-
       ],
       "evolutions": [],
       "battleOnly": false
@@ -418,10 +439,21 @@
       "maleRatio": -1,
       "height": 33,
       "weight": 3250,
-      "pokedex": ["cobblemon.species.kyurem-black.desc"],
-      "labels": ["gen5", "legendary", "restricted"],
-      "aspects": ["black-fusion"],
-      "abilities": ["teravolt", "h:teravolt"],
+      "pokedex": [
+        "cobblemon.species.kyurem-black.desc"
+      ],
+      "labels": [
+        "gen5",
+        "legendary",
+        "restricted"
+      ],
+      "aspects": [
+        "black-fusion"
+      ],
+      "abilities": [
+        "teravolt",
+        "h:teravolt"
+      ],
       "baseStats": {
         "hp": 125,
         "attack": 170,
@@ -450,11 +482,11 @@
         "24:dragonpulse",
         "32:icebeam",
         "40:hypervoice",
-        "form_change:fusionbolt",
+        "48:fusionbolt",
         "56:blizzard",
         "64:imprison",
         "72:outrage",
-        "form_change:freezeshock",
+        "80:freezeshock",
         "88:sheercold",
         "tm:aerialace",
         "tm:ancientpower",

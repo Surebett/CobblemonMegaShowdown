@@ -7,11 +7,21 @@
   "maleRatio": 0.875,
   "height": 15,
   "weight": 819,
-  "pokedex": ["cobblemon.species.swampert.desc"],
-  "labels": ["gen3"],
+  "pokedex": [
+    "cobblemon.species.swampert.desc"
+  ],
+  "labels": [
+    "gen3"
+  ],
   "aspects": [],
-  "abilities": ["torrent", "h:damp"],
-  "eggGroups": ["monster", "water_1"],
+  "abilities": [
+    "torrent",
+    "h:damp"
+  ],
+  "eggGroups": [
+    "monster",
+    "water_1"
+  ],
   "baseStats": {
     "hp": 100,
     "attack": 110,
@@ -258,10 +268,20 @@
       "maleRatio": 0.875,
       "height": 19,
       "weight": 1020,
-      "pokedex": ["cobblemon.species.swampert-mega.desc"],
-      "labels": ["gen6", "mega"],
-      "aspects": ["mega"],
-      "abilities": ["swiftswim", "h:swiftswim"],
+      "pokedex": [
+        "cobblemon.species.swampert-mega.desc"
+      ],
+      "labels": [
+        "gen6",
+        "mega"
+      ],
+      "aspects": [
+        "mega"
+      ],
+      "abilities": [
+        "swiftswim",
+        "h:swiftswim"
+      ],
       "baseStats": {
         "hp": 100,
         "attack": 150,

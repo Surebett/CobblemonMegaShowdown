@@ -3,18 +3,13 @@
   "order": 1,
   "variations": [
     {
-      "aspects": [
-        "mega"
-      ],
-      "poser": "cobblemon:skarmory_mega",
+      "aspects": ["mega"],
+      "poser": "cobblemon:skarmory",
       "model": "cobblemon:skarmory_mega.geo",
       "texture": "cobblemon:textures/pokemon/0227_skarmory/skarmory_mega.png"
     },
     {
-      "aspects": [
-        "mega",
-        "shiny"
-      ],
+      "aspects": ["mega", "shiny"],
       "texture": "cobblemon:textures/pokemon/0227_skarmory/skarmory_mega_shiny.png"
     }
   ]

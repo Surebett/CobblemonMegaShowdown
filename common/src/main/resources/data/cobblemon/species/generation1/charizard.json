@@ -121,7 +121,13 @@
     },
     "fireImmune": true,
     "herd": {
-      "maxSize": "5"
+      "maxSize": 5,
+      "toleratedLeaders": [
+        {
+          "pokemon": "charizard alpha",
+          "tier": 1
+        }
+      ]
     },
     "moving": {
       "fly": {
@@ -372,63 +378,68 @@
       },
       "baseExperienceYield": 317,
       "riding": {
-        "behaviour": {
-          "key": "cobblemon:composite",
-          "alternateBehaviour": {
-            "speed": "Math.clamp(q.entity.velocity.horizontal_magnitude + 0.33, 0, 1)",
+        "behaviours": {
+          "AIR": {
             "key": "cobblemon:air/bird",
-            "gravity": "q.gravity * (0.1 + (q.passenger_count - 1) * 0.1)",
-            "jumpVector": [
-              0,
-              "0.3*q.jump_strength/50",
-              0
-            ]
+            "rideSounds": [
+              {
+                "muffleEnabled": true,
+                "pitchExpr": "math.max(1.0 ,0.2 + math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2))",
+                "playForNonPassengers": false,
+                "playForPassengers": true,
+                "soundLocation": "cobblemon:ride.loop.wind.stereo",
+                "volumeExpr": "math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2)"
+              },
+              {
+                "muffleEnabled": true,
+                "pitchExpr": "math.max(1.0 ,0.2 + math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2))",
+                "playForNonPassengers": true,
+                "playForPassengers": false,
+                "soundLocation": "cobblemon:ride.loop.wind.mono",
+                "volumeExpr": "math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2)"
+              },
+              {
+                "muffleEnabled": true,
+                "pitchExpr": "math.max(1.0 ,0.2 + math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2))",
+                "playForNonPassengers": false,
+                "playForPassengers": true,
+                "soundLocation": "cobblemon:ride.loop.leather.stereo",
+                "volumeExpr": "math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2)"
+              },
+              {
+                "muffleEnabled": true,
+                "pitchExpr": "math.max(1.0 ,0.2 + math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2))",
+                "playForNonPassengers": true,
+                "playForPassengers": false,
+                "soundLocation": "cobblemon:ride.loop.leather.mono",
+                "volumeExpr": "math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2)"
+              }
+            ],
+            "stats": {
+              "ACCELERATION": "45-75",
+              "JUMP": "30-65",
+              "SKILL": "55-85",
+              "SPEED": "30-65",
+              "STAMINA": "45-75"
+            }
           },
-          "defaultBehaviour": {
-            "speed": "Math.clamp(q.entity.velocity.horizontal_magnitude + 0.33, 0, 1)",
+          "LAND": {
             "key": "cobblemon:land/horse",
-            "gravity": "q.gravity * (0.1 + (q.passenger_count - 1) * 0.1)",
-            "jumpVector": [
-              0,
-              "0.3*q.jump_strength/50",
-              "-1 * 0.5*q.jump_strength/50"
-            ]
-          },
-          "transitionStrategy": "cobblemon:strategy/jump"
-        },
-        "seats": [],
-        "stats": {
-          "ACCELERATION": {
-            "ranges": {
-              "AIR": "20-50",
-              "LAND": "90-100"
-            }
-          },
-          "JUMP": {
-            "ranges": {
-              "AIR": "25-50",
-              "LAND": "10-20"
-            }
-          },
-          "SKILL": {
-            "ranges": {
-              "AIR": "50-100",
-              "LAND": "15-30"
-            }
-          },
-          "SPEED": {
-            "ranges": {
-              "AIR": "25-60",
-              "LAND": "10-20"
-            }
-          },
-          "STAMINA": {
-            "ranges": {
-              "AIR": "35-70",
-              "LAND": "15-30"
+            "rideSounds": [],
+            "stats": {
+              "ACCELERATION": "55-65",
+              "JUMP": "15-25",
+              "SKILL": "10-25",
+              "SPEED": "25-40",
+              "STAMINA": "20-30"
             }
           }
-        }
+        },
+        "seats": [
+          {
+            "locator": "seat_1"
+          }
+        ]
       },
       "behaviour": {
         "combat": {
@@ -438,7 +449,13 @@
         },
         "fireImmune": true,
         "herd": {
-          "maxSize": "6"
+          "maxSize": 5,
+          "toleratedLeaders": [
+            {
+              "pokemon": "charizard alpha",
+              "tier": 1
+            }
+          ]
         },
         "moving": {
           "fly": {
@@ -446,11 +463,17 @@
           },
           "swim": {
             "avoidsWater": true,
-            "canSwimInLava": true
+            "canSwimInLava": true,
+            "swimSpeed": 0.1
+          },
+          "walk": {
+            "walkSpeed": 0.147
           }
         },
         "resting": {
+          "canSleep": true,
           "drowsyChance": 0.0333,
+          "light": "0-4",
           "rouseChance": 0.0042
         }
       },
@@ -493,63 +516,68 @@
       },
       "baseExperienceYield": 317,
       "riding": {
-        "behaviour": {
-          "key": "cobblemon:composite",
-          "alternateBehaviour": {
-            "speed": "Math.clamp(q.entity.velocity.horizontal_magnitude + 0.33, 0, 1)",
+        "behaviours": {
+          "AIR": {
             "key": "cobblemon:air/bird",
-            "gravity": "q.gravity * (0.1 + (q.passenger_count - 1) * 0.1)",
-            "jumpVector": [
-              0,
-              "0.3*q.jump_strength/50",
-              0
-            ]
+            "rideSounds": [
+              {
+                "muffleEnabled": true,
+                "pitchExpr": "math.max(1.0 ,0.2 + math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2))",
+                "playForNonPassengers": false,
+                "playForPassengers": true,
+                "soundLocation": "cobblemon:ride.loop.wind.stereo",
+                "volumeExpr": "math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2)"
+              },
+              {
+                "muffleEnabled": true,
+                "pitchExpr": "math.max(1.0 ,0.2 + math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2))",
+                "playForNonPassengers": true,
+                "playForPassengers": false,
+                "soundLocation": "cobblemon:ride.loop.wind.mono",
+                "volumeExpr": "math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2)"
+              },
+              {
+                "muffleEnabled": true,
+                "pitchExpr": "math.max(1.0 ,0.2 + math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2))",
+                "playForNonPassengers": false,
+                "playForPassengers": true,
+                "soundLocation": "cobblemon:ride.loop.leather.stereo",
+                "volumeExpr": "math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2)"
+              },
+              {
+                "muffleEnabled": true,
+                "pitchExpr": "math.max(1.0 ,0.2 + math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2))",
+                "playForNonPassengers": true,
+                "playForPassengers": false,
+                "soundLocation": "cobblemon:ride.loop.leather.mono",
+                "volumeExpr": "math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2)"
+              }
+            ],
+            "stats": {
+              "ACCELERATION": "45-75",
+              "JUMP": "30-65",
+              "SKILL": "55-85",
+              "SPEED": "30-65",
+              "STAMINA": "45-75"
+            }
           },
-          "defaultBehaviour": {
-            "speed": "Math.clamp(q.entity.velocity.horizontal_magnitude + 0.33, 0, 1)",
+          "LAND": {
             "key": "cobblemon:land/horse",
-            "gravity": "q.gravity * (0.1 + (q.passenger_count - 1) * 0.1)",
-            "jumpVector": [
-              0,
-              "0.3*q.jump_strength/50",
-              "-1 * 0.5*q.jump_strength/50"
-            ]
-          },
-          "transitionStrategy": "cobblemon:strategy/jump"
-        },
-        "seats": [],
-        "stats": {
-          "ACCELERATION": {
-            "ranges": {
-              "AIR": "20-50",
-              "LAND": "90-100"
-            }
-          },
-          "JUMP": {
-            "ranges": {
-              "AIR": "25-50",
-              "LAND": "10-20"
-            }
-          },
-          "SKILL": {
-            "ranges": {
-              "AIR": "50-100",
-              "LAND": "15-30"
-            }
-          },
-          "SPEED": {
-            "ranges": {
-              "AIR": "25-60",
-              "LAND": "10-20"
-            }
-          },
-          "STAMINA": {
-            "ranges": {
-              "AIR": "35-70",
-              "LAND": "15-30"
+            "rideSounds": [],
+            "stats": {
+              "ACCELERATION": "55-65",
+              "JUMP": "15-25",
+              "SKILL": "10-25",
+              "SPEED": "25-40",
+              "STAMINA": "20-30"
             }
           }
-        }
+        },
+        "seats": [
+          {
+            "locator": "seat_1"
+          }
+        ]
       },
       "behaviour": {
         "combat": {
@@ -559,7 +587,13 @@
         },
         "fireImmune": true,
         "herd": {
-          "maxSize": "6"
+          "maxSize": 5,
+          "toleratedLeaders": [
+            {
+              "pokemon": "charizard alpha",
+              "tier": 1
+            }
+          ]
         },
         "moving": {
           "fly": {
@@ -567,11 +601,17 @@
           },
           "swim": {
             "avoidsWater": true,
-            "canSwimInLava": true
+            "canSwimInLava": true,
+            "swimSpeed": 0.1
+          },
+          "walk": {
+            "walkSpeed": 0.147
           }
         },
         "resting": {
+          "canSleep": true,
           "drowsyChance": 0.0333,
+          "light": "0-4",
           "rouseChance": 0.0042
         }
       },

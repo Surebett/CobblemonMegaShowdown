@@ -76,11 +76,15 @@
       "willFlee": false
     },
     "herd": {
-      "maxSize": "7",
+      "maxSize": 7,
       "toleratedLeaders": [
         {
-          "pokemon": "venusaur mega",
+          "pokemon": "venusaur mega=false",
           "tier": 1
+        },
+        {
+          "pokemon": "venusaur mega",
+          "tier": 2
         }
       ]
     },
@@ -291,27 +295,24 @@
       },
       "baseExperienceYield": 313,
       "riding": {
-        "behaviour": {
-          "key": "cobblemon:land/horse"
-        },
-        "seats": [],
-        "stats": {
-          "ACCELERATION": {
-            "ranges": "10-65"
-          },
-          "JUMP": {
-            "ranges": "20-40"
-          },
-          "SKILL": {
-            "ranges": "40-85"
-          },
-          "SPEED": {
-            "ranges": "20-50"
-          },
-          "STAMINA": {
-            "ranges": "40-85"
+        "behaviours": {
+          "LAND": {
+            "key": "cobblemon:land/horse",
+            "rideSounds": [],
+            "stats": {
+              "ACCELERATION": "40-75",
+              "JUMP": "40-60",
+              "SKILL": "10-40",
+              "SPEED": "30-55",
+              "STAMINA": "45-85"
+            }
           }
-        }
+        },
+        "seats": [
+          {
+            "locator": "seat_1"
+          }
+        ]
       },
       "behaviour": {
         "combat": {
@@ -320,15 +321,30 @@
           "willFlee": false
         },
         "herd": {
-          "maxSize": "8"
+          "maxSize": 7,
+          "toleratedLeaders": [
+            {
+              "pokemon": "venusaur mega=false",
+              "tier": 1
+            },
+            {
+              "pokemon": "venusaur mega",
+              "tier": 2
+            }
+          ]
         },
         "moving": {
           "swim": {
             "avoidsWater": true
+          },
+          "walk": {
+            "walkSpeed": 0.135
           }
         },
         "resting": {
+          "canSleep": true,
           "drowsyChance": 0.0333,
+          "light": "0-4",
           "rouseChance": 0.0042,
           "times": [
             "night, noon"

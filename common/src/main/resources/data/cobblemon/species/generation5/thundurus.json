@@ -5,36 +5,36 @@
   "primaryType": "electric",
   "secondaryType": "flying",
   "riding": {
-  "behaviours": {
-    "AIR": {
-      "key": "cobblemon:air/bird",
-      "rideSounds": [],
-      "stats": {
-        "ACCELERATION": "41-60",
-        "JUMP": "41-60",
-        "SKILL": "41-60",
-        "SPEED": "21-40",
-        "STAMINA": "41-60"
+    "behaviours": {
+      "AIR": {
+        "key": "cobblemon:air/bird",
+        "rideSounds": [],
+        "stats": {
+          "ACCELERATION": "41-60",
+          "JUMP": "41-60",
+          "SKILL": "41-60",
+          "SPEED": "21-40",
+          "STAMINA": "41-60"
+        }
+      },
+      "LAND": {
+        "key": "cobblemon:land/horse",
+        "rideSounds": [],
+        "stats": {
+          "ACCELERATION": "21-40",
+          "JUMP": "41-60",
+          "SKILL": "21-40",
+          "SPEED": "21-40",
+          "STAMINA": "41-60"
+        }
       }
     },
-    "LAND": {
-      "key": "cobblemon:land/horse",
-      "rideSounds": [],
-      "stats": {
-        "ACCELERATION": "21-40",
-        "JUMP": "41-60",
-        "SKILL": "21-40",
-        "SPEED": "21-40",
-        "STAMINA": "41-60"
+    "seats": [
+      {
+        "locator": "seat_1"
       }
-    }
+    ]
   },
-  "seats": [
-    {
-      "locator": "seat_1"
-    }
-  ]
-},
   "maleRatio": 1,
   "height": 15,
   "weight": 610,
@@ -143,7 +143,6 @@
     "tm:lashout",
     "tm:nastyplot",
     "tm:payback",
-    "tm:powershift",
     "tm:protect",
     "tm:psychic",
     "tm:raindance",
@@ -182,7 +181,6 @@
     "tm:weatherball",
     "tm:wildcharge",
     "tm:zenheadbutt",
-    "tutor:block",
     "tutor:bulkup",
     "tutor:chargebeam",
     "tutor:darkpulse",
@@ -195,7 +193,6 @@
     "tutor:irontail",
     "tutor:knockoff",
     "tutor:lashout",
-    "tutor:powershift",
     "tutor:psychic",
     "tutor:rest",
     "tutor:risingvoltage",
@@ -216,6 +213,7 @@
     "legacy:doubleteam",
     "legacy:frustration",
     "legacy:hiddenpower",
+    "legacy:powershift",
     "legacy:return",
     "legacy:round",
     "legacy:secretpower",

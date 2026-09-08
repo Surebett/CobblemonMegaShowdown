@@ -6,23 +6,14 @@ license = "MEGA SHOWDOWN LICENSE v2.1"
 [[mods]]
 modId = "mega_showdown"
 version = "${version}"
-displayName = "Cobblemon:Mega Showdown"
+displayName = "Cobblemon: Mega Showdown"
 authors = "Yajat Kaul"
 description = '''
-Adding mega evolutions, z-moves, teralization, dynamax, ultra burst and fusions to the game
-Features
-- Cosmetics
-- All form changes
-- Ridding supported
-- All 48 megas
+Adds Mega Evolutions, Z-Moves, Teralization, Dyna/Gigantamax, Ultra Burst and fusions to the game!
+Features:
+- Adds every Pokémon & form related to gimmicks (megas, form changes, gmax, fusions etc.) & many legendary models
+- Riding supported for many of them
 - Accessories support
-- Adds primal's
-- Adds tera gimmik
-- Adds mega gimmik
-- Adds z moves gimmik
-- Adds dynamax gimmik
-- Adds ultra burst gimmik
-- All fusion mons
 '''
 logoFile = "assets/mega_showdown/icon.png"
 
@@ -50,7 +41,7 @@ side = "BOTH"
 [[dependencies.mega_showdown]]
 modId = "cobblemon"
 type = "required"
-versionRange = "[1.7.3, )"
+versionRange = "[1.8.0, )"
 ordering = "AFTER"
 side = "BOTH"
 

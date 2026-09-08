@@ -4,7 +4,7 @@
   "neededUninstalledMods": [],
   "spawns": [
     {
-      "id": "oricorio-1",
+      "id": "oricorio-baile-1",
       "pokemon": "oricorio dance_style=baile",
       "presets": [
         "natural"
@@ -13,7 +13,7 @@
       "spawnablePositionType": "grounded",
       "bucket": "uncommon",
       "level": "16-41",
-      "weight": 10.0,
+      "weight": 60.0,
       "condition": {
         "minSkyLight": 8,
         "maxSkyLight": 15,
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "oricorio-2",
+      "id": "oricorio-pom-pom-1",
       "pokemon": "oricorio dance_style=pom-pom",
       "presets": [
         "natural"
@@ -33,7 +33,7 @@
       "spawnablePositionType": "grounded",
       "bucket": "uncommon",
       "level": "16-41",
-      "weight": 10.0,
+      "weight": 60.0,
       "condition": {
         "minSkyLight": 8,
         "maxSkyLight": 15,
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "oricorio-3",
+      "id": "oricorio-pau-1",
       "pokemon": "oricorio dance_style=pau",
       "presets": [
         "natural"
@@ -53,7 +53,7 @@
       "spawnablePositionType": "grounded",
       "bucket": "uncommon",
       "level": "16-41",
-      "weight": 10.0,
+      "weight": 60.0,
       "condition": {
         "minSkyLight": 8,
         "maxSkyLight": 15,
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "oricorio-4",
+      "id": "oricorio-sensu-1",
       "pokemon": "oricorio dance_style=sensu",
       "presets": [
       ],
@@ -72,7 +72,7 @@
       "spawnablePositionType": "grounded",
       "bucket": "uncommon",
       "level": "16-41",
-      "weight": 10.0,
+      "weight": 60.0,
       "condition": {
         "minSkyLight": 8,
         "maxSkyLight": 15,

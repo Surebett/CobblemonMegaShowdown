@@ -18,6 +18,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.CommonColors;
 
 import java.util.List;
+import java.util.Locale;
 import java.util.stream.StreamSupport;
 
 public class MovePreviewWidget extends AbstractWidget {
@@ -59,13 +60,13 @@ public class MovePreviewWidget extends AbstractWidget {
             if (types.size() > 1) {
                 eff = TypeEffectivenessUtils.getEffectiveness(
                         this.move.getElementalType().getShowdownId(),
-                        types.getFirst().getShowdownId(),
-                        types.getLast().getShowdownId()
+                        types.getFirst().getName().toLowerCase(Locale.ROOT),
+                        types.getLast().getName().toLowerCase(Locale.ROOT)
                 );
             } else {
                 eff = TypeEffectivenessUtils.getEffectiveness(
                         this.move.getElementalType().getShowdownId(),
-                        types.getFirst().getShowdownId()
+                        types.getFirst().getName().toLowerCase(Locale.ROOT)
                 );
             }
 

@@ -1,10 +1,5 @@
-# 1.0+1.8+1.21.1-release
-- Riding Fixes
-- New Mega Crystal Model
-- New Mega Skarmory Model
-- Some fixes for the move pools
-- Removes Ability Capsule repice (base cobblemon have a recipe now)
-- Fixed Gmax Flapple
-- Alpha pokemons fixes (edits to pokemon.js file and new alphaboost condition from base cobblemon)
-- Added aura guard (just the ability file not the lang file)
-- Removed Lycanroc File
+# 1.0.1+1.8+1.21.1-release
+- Added locators to all Models
+- Removed a duplicate texture
+- New hoopa model
+- Fixed diff langs crashing battle screen
